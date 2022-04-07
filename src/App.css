@@ -1,8 +1,7 @@
 @font-face {
-    font-family: Pacifio, serif;
-    src: url(./source/font/Pacifico/Pacifico-1.ttf);
+    font-family: "Pacifio-1";
+    src: url("./source/font/Pacifico/Pacifico-1.ttf");
 }
-
 .App {
   text-align: center;
 }
