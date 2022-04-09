@@ -1,7 +1,6 @@
-import styles from './banner.module.scss';
-import classNames from 'classnames';
-import { Button } from '@douyinfe/semi-ui';
-import { IconChevronRight } from '@douyinfe/semi-ui/node_modules/@douyinfe/semi-icons';
+import styles from "./banner.module.scss";
+import { Button } from "@douyinfe/semi-ui";
+import { IconChevronRight } from "@douyinfe/semi-icons";
 
 type BannerProps = {
     welcomeCn: string,
@@ -12,18 +11,18 @@ type BannerProps = {
 export default function Banner(props: BannerProps){
 
     return (
-        <div className={classNames(styles.bannerContainer)}>
+        <div className={styles.bannerContainer}>
             <div className={styles.backgroundImgContainer}>
-                <div className={classNames(styles.backgroundImg)}></div>
-                <div className={classNames(styles.backgroundImgShadow)}></div>
+                <div className={styles.backgroundImg}></div>
+                <div className={styles.backgroundImgShadow}></div>
             </div>
-            <div className={classNames(styles.bannerText)}>
-                <p className={classNames(styles.welcomeCnText)}>{props.welcomeCn}</p>
-                <p className={classNames(styles.welcomeEnText)}>{props.welcomeEn}</p>
-                <p className={classNames(styles.libText)}>{props.stateContent}</p>
+            <div className={styles.bannerText}>
+                <p className={styles.welcomeCnText}>{props.welcomeCn}</p>
+                <p className={styles.welcomeEnText}>{props.welcomeEn}</p>
+                <p className={styles.libText}>{props.stateContent}</p>
                 <Button 
-                    style={{backgroundColor: 'black'}}
-                    icon={<IconChevronRight></IconChevronRight>}
+                    className={styles.buttonTheme}
+                    icon={<IconChevronRight />}
                     iconPosition="right"
                     theme="solid"
                     onClick={props.onClick}
