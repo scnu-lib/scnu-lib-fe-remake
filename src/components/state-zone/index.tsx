@@ -2,28 +2,42 @@ import classNames from "classnames";
 import styles from "./state-zone.module.scss";
 
 type StatezoneProps = {
+    style?: object,
     reverse: boolean,
-    svgSrc: string,
+    svgSrc?: string,
     titleCn: string,
     titleEn: string,
-    content: string
+    content: string | JSX.Element
 }
 export default function Statezone(props: StatezoneProps){
 
     return (
-        <div className={classNames(styles.stateContainer, {[styles.flexReverse]: props.reverse})}>
+        <div 
+            className={classNames(styles.stateContainer, {[styles.flexReverse]: props.reverse})}
+            style={props.style}
+        >
             <div className={classNames(styles.introduceContainer)}>
                 <p className={styles.titleTextCn}>{props.titleCn}</p>
                 <p className={styles.titleTextEn}>{props.titleEn}</p>
-                <p className={styles.contentText}>{props.content}</p>
+                <div className={
+                    classNames(
+                        styles.contentText, 
+                        {[styles.JSXcontentText]: typeof props.content != "string"}
+                    )
+                }>
+                    {props.content}
+                </div>
             </div>
-            <div className={classNames(styles.pictureContainer)}>
-                <div 
-                    style={{backgroundImage: `url(${props.svgSrc})`}}
-                    className={classNames(styles.backgroundImg)}
-                ></div>
-                <div className={classNames(styles.backgroundImgShadow)}></div>
-            </div>
+            {props.svgSrc?
+                <div className={classNames(styles.pictureContainer)}>
+                    <div 
+                        style={{backgroundImage: `url(${props.svgSrc})`}}
+                        className={classNames(styles.backgroundImg)}
+                    ></div>
+                    <div className={classNames(styles.backgroundImgShadow)}></div>
+                </div>
+                :null
+            }
         </div>
     )
 }
