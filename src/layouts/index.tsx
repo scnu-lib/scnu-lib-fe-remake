@@ -1,4 +1,4 @@
-import Navigation from "../components/Nav";
+import Navigation from "../components/nav";
 import styles from "./layouts.module.scss";
 import bookLogo from '../source/bookLogo.svg';
 import classNames from "classnames";
