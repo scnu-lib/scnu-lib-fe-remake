@@ -6,7 +6,6 @@ import CardList from "../components/card-list";
 import Newspaper from "../source/newspaper.svg";
 import Studying from "../source/studying.svg";
 import styles from "./index.module.scss";
-import classNames from "classnames";
 
 export default function Index(){
     const navigationTo = useNavigate();
@@ -40,7 +39,7 @@ export default function Index(){
                                     imgElement: (
                                         <div 
                                             style={{ background: `url(${Studying}) no-repeat center` }}
-                                            className={classNames(styles.showCardImg)}
+                                            className={styles.showCardImg}
                                         ></div>
                                     )
                                 },
@@ -49,7 +48,7 @@ export default function Index(){
                                     imgElement: (
                                         <div 
                                             style={{ background: `url(${Newspaper}) no-repeat center` }}
-                                            className={classNames(styles.showCardImg)}
+                                            className={styles.showCardImg}
                                         ></div>
                                     )
                                 }
