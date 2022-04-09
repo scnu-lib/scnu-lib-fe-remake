@@ -20,7 +20,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-
+        .bannerButton{
+          background-color: black;
+        }
         .welcomeCnText{
             font-size: 40px;
             font-weight: bolder;

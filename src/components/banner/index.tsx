@@ -5,14 +5,14 @@ import { IconChevronRight } from "@douyinfe/semi-icons";
 
 export default function Banner() {
 	return (
-		<div className={classNames(styles.bannerContainer)}>
-			<div className={classNames(styles.backgroundImg)}></div>
-			<div className={classNames(styles.bannerText)}>
-				<p className={classNames(styles.welcomeCnText)}>欢迎</p>
-				<p className={classNames()}>华南师范大学图书馆</p>
+		<div className={styles.bannerContainer}>
+			<div className={styles.backgroundImg}></div>
+			<div className={styles.bannerText}>
+				<p className={styles.welcomeCnText}>欢迎</p>
+				<p>华南师范大学图书馆</p>
 				<Button
-					style={{ backgroundColor: "black" }}
-					icon={<IconChevronRight></IconChevronRight>}
+					className={styles.bannerButton}
+					icon={<IconChevronRight />}
 					iconPosition="right"
 					theme="solid"
 				>
