@@ -16,9 +16,13 @@ export default function Statezone(props: StatezoneProps){
             className={classNames(styles.stateContainer, {[styles.flexReverse]: props.reverse})}
             style={props.style}
         >
-            <div className={classNames(styles.introduceContainer)}>
-                <p className={styles.titleTextCn}>{props.titleCn}</p>
-                <p className={styles.titleTextEn}>{props.titleEn}</p>
+            <div 
+                className={classNames(styles.introduceContainer, {[styles.introduceContainerCenter]: !props.svgSrc})}
+            >
+                <div className={styles.fontTitleContainer}>
+                    <p className={styles.titleTextCn}>{props.titleCn}</p>
+                    <p className={styles.titleTextEn}>{props.titleEn}</p>
+                </div>
                 <div className={
                     classNames(
                         styles.contentText, 
