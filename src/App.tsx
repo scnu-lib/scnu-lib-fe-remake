@@ -1,22 +1,28 @@
-import Index from './pages';
-import ActivitiesDetail from './pages/activities-detail';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layouts from './layouts';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layouts from "./layouts";
+import routers, { RouterRender } from "./routers";
+
+import "./App.css";
 
 function App() {
-    return (
-        <div>
-            <BrowserRouter>
-                <Layouts>
-                    <Routes>
-                        <Route path="/" element={<Index></Index>}></Route>
-                        <Route path="/activities" element={<ActivitiesDetail></ActivitiesDetail>}></Route>
-                    </Routes>
-                </Layouts>
-            </BrowserRouter>
-        </div>
-    );
+	// const id = React.useId();
+	return (
+		<div>
+			<BrowserRouter>
+				<Layouts>
+					<Routes>
+						{routers.map((router, idx) => (
+							<Route
+								key={`routers-${idx}`}
+								path={router.path}
+								element={<RouterRender router={router} />}
+							/>
+						))}
+					</Routes>
+				</Layouts>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
