@@ -15,21 +15,26 @@
         align-items: flex-start;
         position: relative;
 
-        .titleTextCn{
-            font-size: 40px;
-            font-weight: bolder;
-            color: rgb(203, 203, 203);
-            margin: 0;
-        }
+        .fontTitleContainer{
+            position: relative;
+            display: flex;
 
-        .titleTextEn{
-            font-size: 40px;
-            font-family: "Pacifio-1";
-            position: absolute;
-            margin: 0;
-            margin-left: 140px;
-            width: 300px;
-            margin-top: 20px;
+            .titleTextCn{
+                font-size: 40px;
+                font-weight: bolder;
+                color: rgb(203, 203, 203);
+                margin: 0;
+            }
+    
+            .titleTextEn{
+                font-size: 40px;
+                font-family: "Pacifio-1";
+                position: absolute;
+                margin: 0;
+                margin-left: 140px;
+                width: 300px;
+                margin-top: 20px;
+            }
         }
 
         .contentText{
@@ -48,6 +53,11 @@
             width: auto;
         }
     }
+
+    .introduceContainerCenter{
+        align-items: center;
+    }
+
 
     .pictureContainer{
         display: flex;
