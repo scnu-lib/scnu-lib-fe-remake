@@ -4140,6 +4140,11 @@ eslint-config-react-app@^7.0.0:
     eslint-plugin-react-hooks "^4.3.0"
     eslint-plugin-testing-library "^5.0.1"
 
+eslint-config-scnu@^1.3.5:
+  version "1.3.1"
+  resolved "https://repo.huaweicloud.com/repository/npm/eslint-config-scnu/-/eslint-config-scnu-1.3.1.tgz#54b2529cb0bb07f90d232a50ef591ab7b3484b51"
+  integrity sha512-4hsPOiufISRh4wrBtH8ULk+zrWvTvLP5y8K9xe30c3zF5T5eT38Fy4uZRiHoF7wnIfJi8LsiTszyDnZutUSJSQ==
+
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
   resolved "https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz"
