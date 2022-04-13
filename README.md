@@ -1,8 +1,28 @@
-# Getting Started with Create React App
+# Welcome to South China Normal University Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).***
 
-## Available Scripts
+## About
+
+We are the library management platform of South China Normal University, where you can get information about the library's activities. 
+
+## How to run this app
+
+Firs clone the app with: 
+
+```bash
+git clone https://github.com/scnu-lib/scnu-lib-fe-remake.git
+```
+Now change into the app's directory and install the dependencies
+
+```bash
+cd scnu-lib-fe-remake
+```
+To install dependencies, type:
+
+```bash
+npm install
+```
 
 In the project directory, you can run:
 
@@ -44,3 +64,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Contributing
+
+Details on how to contribute would be outlined soon. 
