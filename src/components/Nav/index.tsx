@@ -5,6 +5,7 @@ type NavigationProps = {
     indexNav: { imgSrc: JSX.Element, title: string, path: string }, 
     itemPath: { title: string, path: string }[]
 };
+
 export default function Navigation(props: NavigationProps){
   const navigateTo = useNavigate();
 
