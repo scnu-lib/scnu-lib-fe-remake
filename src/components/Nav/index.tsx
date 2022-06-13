@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 type NavigationProps = {
     indexNav: { imgSrc: JSX.Element, title: string, path: string }, 
-    itemPath: { title: string, path: string }[]
+    itemPath: { title: string, path?: string }[]
 };
 
 export default function Navigation(props: NavigationProps){
@@ -23,7 +23,7 @@ export default function Navigation(props: NavigationProps){
           key={item.path}
           itemKey={index}
           text={item.title}
-          onClick={() => navigateTo(item.path)}
+          onClick={() => navigateTo(item.path as string)}
         >
         </Nav.Item>
       ))}

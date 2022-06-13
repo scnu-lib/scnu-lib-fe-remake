@@ -9,7 +9,7 @@ export default function Layouts(props: {children: JSX.Element}){
       <Navigation
         indexNav={{imgSrc: <img src={bookLogo} alt='index' />, title: '阅马平台', path: '/'}}
         itemPath={[
-          { title: '活动详情', path: '/activities' }
+          { title: '活动列表', path: '/activities' }
         ]}
       ></Navigation>
       <div className={styles.showPageContainer}>
