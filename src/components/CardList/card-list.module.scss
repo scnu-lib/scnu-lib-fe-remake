@@ -1,0 +1,20 @@
+.cardListContainer{
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    align-items: center;
+    margin-top: 10px;
+
+    .showCardImg{
+        background-size: 150px 150px !important;
+        height: 200px;
+        width: 200px;
+    }
+
+    .showMore{
+        display: flex;
+        font-size: 20px;
+        color: rgb(232, 232, 232);
+        font-weight: normal;
+    }
+}
