@@ -1,4 +1,4 @@
-import Banner from '../components/Ban';
+import Banner from '../components/Banner';
 import StateZone from '../components/StateZone';
 import { useNavigate } from 'react-router-dom';
 import Study from '../source/undraw_bibliophile_re_xarc.svg';

@@ -1,4 +1,4 @@
-import styles from './Ban.module.scss';
+import styles from './Banner.module.scss';
 import { Button } from '@douyinfe/semi-ui';
 import { IconChevronRight } from '@douyinfe/semi-icons';
 
