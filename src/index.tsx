@@ -2,7 +2,7 @@ import './index.css';
 import App from './App';
 import { createRoot } from 'react-dom/client';
 
-const container: HTMLElement = document.getElementById("root") as HTMLElement;
+const container: HTMLElement = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 root.render(<App />);
 

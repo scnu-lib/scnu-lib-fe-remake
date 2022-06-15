@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 type NavigationProps = {
     indexNav: { imgSrc: JSX.Element, title: string, path: string }, 
-    itemPath: { title: string, path: string }[]
+    itemPath: { title: string, path?: string, subRouter?: {title: string, path?: string}[] }[]
 };
+
 export default function Navigation(props: NavigationProps){
   const navigateTo = useNavigate();
 
@@ -17,15 +18,30 @@ export default function Navigation(props: NavigationProps){
         onClick={() => navigateTo(props.indexNav.path)}
         style={{color: 'black'}}
       ></Nav.Item>
-      {props.itemPath.map((item, index) => (
-        <Nav.Item 
-          key={item.path}
-          itemKey={index}
-          text={item.title}
-          onClick={() => navigateTo(item.path)}
-        >
-        </Nav.Item>
-      ))}
+      {props.itemPath.map((item, index) => {
+
+        if(item.subRouter) return (
+          <Nav.Sub key={index} itemKey={index} text={item.title}>
+            {item.subRouter.map((it) => (
+              <Nav.Item 
+                key={it.title}
+                itemKey={it.title}
+                text={it.title}
+                onClick={() => navigateTo(it.path as string)}
+              />
+            ))}
+          </Nav.Sub>
+        );
+
+        return (
+          <Nav.Item 
+            key={item.title}
+            itemKey={item.title}
+            text={item.title}
+            onClick={() => navigateTo(item.path as string)}
+          />
+        );
+      })}
     </Nav>
   );
 }
