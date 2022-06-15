@@ -1,8 +1,8 @@
-import Banner from '../components/banner';
-import StateZone from '../components/state-zone';
+import Banner from '../components/Ban';
+import StateZone from '../components/StateZone';
 import { useNavigate } from 'react-router-dom';
 import Study from '../source/undraw_bibliophile_re_xarc.svg';
-import CardList from '../components/card-list';
+import CardList from '../components/CardList';
 import Newspaper from '../source/newspaper.svg';
 import Studying from '../source/studying.svg';
 import styles from './index.module.scss';

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import styles from './state-zone.module.scss';
+import styles from './StateZone.module.scss';
 
 type StatezoneProps = {
     style?: object,
