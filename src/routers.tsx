@@ -1,5 +1,5 @@
 import Index from './pages';
-import ActivitiesDetail from './pages/activities-detail';
+import ActivitiesDetail from './pages/ActivitiesDetail';
 
 interface RoutersItem {
 	title: string;

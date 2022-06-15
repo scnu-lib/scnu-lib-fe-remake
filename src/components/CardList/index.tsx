@@ -1,6 +1,6 @@
 import { Card } from '@douyinfe/semi-ui';
 import classNames from 'classnames';
-import styles from './card-list.module.scss';
+import styles from './CardList.module.scss';
 type CardListProps = {
     contentList: {name: string, imgElement: JSX.Element}[],
     showTips?: string

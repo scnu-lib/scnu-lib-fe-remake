@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import styles from './state-zone.module.scss';
+import styles from './StateZone.module.scss';
 
 type StatezoneProps = {
     style?: object,
@@ -9,7 +9,7 @@ type StatezoneProps = {
     titleEn: string,
     content: string | JSX.Element
 }
-export default function Statezone(props: StatezoneProps){
+export default function StateZone(props: StatezoneProps){
 
   return (
     <div 
