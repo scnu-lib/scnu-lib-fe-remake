@@ -21,7 +21,7 @@ export default function Navigation(props: NavigationProps){
       {props.itemPath.map((item, index) => {
 
         if(item.subRouter) return (
-          <Nav.Sub key={index} itemKey={index} text={item.title}>
+          <Nav.Sub key={item.title} itemKey={item.title} text={item.title}>
             {item.subRouter.map((it) => (
               <Nav.Item 
                 key={it.title}

@@ -26,7 +26,7 @@ export default function Index(){
         svgSrc={Study}
       ></Statezone>
       <Statezone
-        style={{ backgroundColor: 'ghostwhite' }}
+        style={{ backgroundColor: 'rgba(216, 238, 254, 0.38)' }}
         reverse={false}
         titleCn={'图书馆活动'}
         titleEn={'Activities'}
