@@ -9,7 +9,7 @@ type StatezoneProps = {
     titleEn: string,
     content: string | JSX.Element
 }
-export default function Statezone(props: StatezoneProps){
+export default function StateZone(props: StatezoneProps){
 
   return (
     <div 

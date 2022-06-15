@@ -18,7 +18,7 @@ export default function Navigation(props: NavigationProps){
         onClick={() => navigateTo(props.indexNav.path)}
         style={{color: 'black'}}
       ></Nav.Item>
-      {props.itemPath.map((item, index) => {
+      {props.itemPath.map((item) => {
 
         if(item.subRouter) return (
           <Nav.Sub key={item.title} itemKey={item.title} text={item.title}>
