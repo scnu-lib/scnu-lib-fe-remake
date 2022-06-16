@@ -15,11 +15,12 @@ export default function MessageAlert(){
         <Dropdown.Menu className={style.menuContainer}>
           <div className={style.dropDownTitle}>通知中心</div>
           <div className={style.dropDownItemContainer}>
-            { isUserlogin === false ?
+            { isUserlogin ?
+              null
+              : 
               <div className={style.noLogin}>
                 <p className={style.noLoginText}>登录查看信息</p>
               </div>
-              : null
             }
           </div>
         </Dropdown.Menu>

@@ -1,20 +1,19 @@
-.dropDownStyle{
+.dropDownStyle {
   border: 2px black solid;
   border-radius: 8px;
   padding: 20px;
   display: flex;
 
-
-  .menuContainer{
+  .menuContainer {
     width: 230px;
 
-    .dropDownTitle{
+    .dropDownTitle {
       color: black;
       font-weight: bold;
       margin-left: 0;
     }
 
-    .dropDownItemContainer{
+    .dropDownItemContainer {
       margin-top: 10px;
       height: 222px;
       display: flex;
@@ -23,7 +22,7 @@
       align-items: center;
       overflow: auto;
 
-      .noLogin{
+      .noLogin {
         width: 230px;
         height: 100%;
         display: flex;
