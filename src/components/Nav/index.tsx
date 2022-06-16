@@ -1,6 +1,7 @@
 import { Nav, Button } from '@douyinfe/semi-ui';
 import { IconHelpCircle, IconBell } from '@douyinfe/semi-icons';
 import UserLogin from '../UserLogin';
+import MessageAlert from '../MessageAlert';
 import { useNavigate } from 'react-router-dom';
 import style from './Nav.module.scss';
 
@@ -52,11 +53,7 @@ export default function Navigation(props: NavigationProps){
             type='tertiary'
             icon={<IconHelpCircle size='large'></IconHelpCircle>} 
           />
-          <Button 
-            theme='borderless'
-            type='tertiary' 
-            icon={<IconBell size='large'></IconBell>} 
-          />
+          <MessageAlert/>
         </div>
         <UserLogin />
       </Nav.Footer>
