@@ -1,5 +1,5 @@
 import { Nav, Button } from '@douyinfe/semi-ui';
-import { IconHelpCircle, IconBell } from '@douyinfe/semi-icons';
+import { IconHelpCircle } from '@douyinfe/semi-icons';
 import UserLogin from '../UserLogin';
 import MessageAlert from '../MessageAlert';
 import { useNavigate } from 'react-router-dom';
