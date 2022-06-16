@@ -1,5 +1,8 @@
-import { Nav } from '@douyinfe/semi-ui';
+import { Nav, Button } from '@douyinfe/semi-ui';
+import { IconHelpCircle, IconBell } from '@douyinfe/semi-icons';
+import UserLogin from '../UserLogin';
 import { useNavigate } from 'react-router-dom';
+import style from './Nav.module.scss';
 
 type NavigationProps = {
     indexNav: { imgSrc: JSX.Element, title: string, path: string }, 
@@ -42,6 +45,21 @@ export default function Navigation(props: NavigationProps){
           />
         );
       })}
+      <Nav.Footer>
+        <div className={style.footerContainer}>
+          <Button 
+            theme='borderless' 
+            type='tertiary'
+            icon={<IconHelpCircle size='large'></IconHelpCircle>} 
+          />
+          <Button 
+            theme='borderless'
+            type='tertiary' 
+            icon={<IconBell size='large'></IconBell>} 
+          />
+        </div>
+        <UserLogin />
+      </Nav.Footer>
     </Nav>
   );
 }
