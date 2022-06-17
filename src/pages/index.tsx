@@ -17,14 +17,14 @@ export default function Index(){
         welcomeEn='welcome'
         stateContent='华南师范大学图书馆'
         onClick={() => navigationTo('/activities')}
-      ></Banner>
+      />
       <StateZone
         reverse={false}
         titleCn={'关于我们'}
         titleEn={'About us'}
         content={'我们是华南师范大学图书馆管理平台，在这里可以获取到关于图书馆的活动信息'}
         svgSrc={Study}
-      ></StateZone>
+      />
       <StateZone
         style={{ backgroundColor: 'rgba(216, 238, 254, 0.38)' }}
         reverse={false}
@@ -55,9 +55,9 @@ export default function Index(){
               ]
             }
             showTips={'更多活动将陆续添加~'}
-          ></CardList>
+          />
         }
-      ></StateZone>
+      />
     </div>
   );
 }
