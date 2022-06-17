@@ -1,24 +1,24 @@
 @font-face {
-    font-family: "Pacifio-1";
-    src: url("./source/font/Pacifico/Pacifico-1.ttf");
+  font-family: "Pacifio-1";
+  src: url("./source/font/Pacifico/Pacifico-1.ttf");
 }
 
-::-webkit-scrollbar-thumb{
-    width: 8px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: rgb(0 0 0 / 40%);
+  border-radius: 8px;
 }
 
-::-webkit-scrollbar{
-    width:6px;
-    height: 6px;
-    background-color: rgba(0, 0, 0, 0);
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: rgb(0 0 0 / 0%);
 }
 
-::-webkit-scrollbar-button{
-    display: none;
+::-webkit-scrollbar-button {
+  display: none;
 }
 
-::-webkit-scrollbar-track{
-    display: none;
+::-webkit-scrollbar-track {
+  display: none;
 }

@@ -3,13 +3,12 @@ import { Button } from '@douyinfe/semi-ui';
 import { IconChevronRight } from '@douyinfe/semi-icons';
 
 type BannerProps = {
-    welcomeCn: string,
-    welcomeEn: string,
-    stateContent: string,
-    onClick: ()=>void
-}
-export default function Banner(props: BannerProps){
-
+  welcomeCn: string;
+  welcomeEn: string;
+  stateContent: string;
+  onClick: () => void;
+};
+export default function Banner(props: BannerProps) {
   return (
     <div className={styles.bannerContainer}>
       <div className={styles.backgroundImgContainer}>
@@ -20,13 +19,15 @@ export default function Banner(props: BannerProps){
         <p className={styles.welcomeCnText}>{props.welcomeCn}</p>
         <p className={styles.welcomeEnText}>{props.welcomeEn}</p>
         <p className={styles.libText}>{props.stateContent}</p>
-        <Button 
+        <Button
           className={styles.buttonTheme}
           icon={<IconChevronRight />}
           iconPosition='right'
           theme='solid'
           onClick={props.onClick}
-        >点击了解</Button>
+        >
+          点击了解
+        </Button>
       </div>
     </div>
   );
