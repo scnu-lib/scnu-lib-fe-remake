@@ -8,6 +8,7 @@ type BannerProps = {
   stateContent: string;
   onClick: () => void;
 };
+
 export default function Banner(props: BannerProps) {
   return (
     <div className={styles.bannerContainer}>

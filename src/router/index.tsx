@@ -1,7 +1,7 @@
-import Index from './pages';
-import ActivitiesDetail from './pages/ActivitiesDetail';
-import NormalActivity from './pages/NormalActivity';
-import VolunteerActivity from './pages/VolunteerActivity';
+import Index from '../pages';
+import ActivitiesDetail from '../pages/ActivitiesDetail';
+import NormalActivity from '../pages/NormalActivity';
+import VolunteerActivity from '../pages/VolunteerActivity';
 
 interface RoutersItem {
   title: string;

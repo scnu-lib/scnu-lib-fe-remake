@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pacifio-1";
-  src: url("./source/font/Pacifico/Pacifico-1.ttf");
+  src: url("/src/assets/font/Pacifico/Pacifico-1.ttf");
 }
 
 ::-webkit-scrollbar-thumb {

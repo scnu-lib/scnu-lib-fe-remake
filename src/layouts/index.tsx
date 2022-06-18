@@ -1,6 +1,6 @@
 import Navigation from '../components/Nav';
 import styles from './layouts.module.scss';
-import bookLogo from '../source/bookLogo.svg';
+import bookLogo from '../assets/svg/bookLogo.svg';
 
 export default function Layouts(props: { children: JSX.Element }) {
   return (
