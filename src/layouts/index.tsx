@@ -1,13 +1,14 @@
 import Navigation from '../components/Nav';
 import styles from './layouts.module.scss';
-import bookLogo from '../source/bookLogo.svg';
+import { Icon } from '@douyinfe/semi-ui';
+import { ReactComponent as BookLogo } from '../source/bookLogo.svg';
 
 export default function Layouts(props: {children: JSX.Element}){
 
   return (
     <div className={styles.windowContainer}>
       <Navigation
-        indexNav={{imgSrc: <img src={bookLogo} alt='index' />, title: '阅马平台', path: '/'}}
+        indexNav={{imgSrc: <Icon svg={<BookLogo style={{ width: 20, height: 20 }} />} />, title: '阅马平台', path: '/'}}
         itemPath={[
           { title: '活动列表', path: '/activities' },
           { title: '我的活动', subRouter: [

@@ -1,8 +1,9 @@
-import { Button, Dropdown } from '@douyinfe/semi-ui';
+import { Button, Dropdown, Typography } from '@douyinfe/semi-ui';
 import { IconBell } from '@douyinfe/semi-icons';
 import style from './MessageAlert.module.scss';
 import { useRecoilState } from 'recoil';
 import { isLogin } from '../../store';
+const { Text } = Typography;
 
 export default function MessageAlert(){
   const [isUserlogin, setIsUserLogin] = useRecoilState(isLogin);
@@ -19,7 +20,7 @@ export default function MessageAlert(){
               null
               : 
               <div className={style.noLogin}>
-                <p className={style.noLoginText}>登录查看信息</p>
+                <Text className={style.noLoginText}>登录查看信息</Text>
               </div>
             }
           </div>
