@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layouts from './layouts';
-import routers, { RouterRender } from './routers';
+import routers, { RouterRender } from './router';
 import { RecoilRoot } from 'recoil';
-import './App.css';
-
+import './styles/App.css';
 
 function App() {
   // const id = React.useId();

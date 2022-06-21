@@ -4,43 +4,32 @@ import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { isLogin } from '../../store';
 
-export default function UserLogin(){
+export default function UserLogin() {
   const [isUserLogin, setIsUserLogin] = useRecoilState(isLogin);
   const [showModal, setShowModal] = useState(false);
 
-  function handleShowModal(){
+  function handleShowModal() {
     setShowModal(true);
   }
 
-  function handleCancel(){
+  function handleCancel() {
     setShowModal(false);
   }
 
-  function handleOk(){
+  function handleOk() {
     setShowModal(false);
   }
 
   return (
-    <div className={ style.loginContainer }>
-      { isUserLogin ?  
-        null
-        : 
+    <div className={style.loginContainer}>
+      {isUserLogin ? null : (
         <div style={{ display: 'flex' }}>
-          <Button 
-            className={ style.buttonStyle }
-            theme='borderless'
-            onClick={handleShowModal}
-          >
+          <Button className={style.buttonStyle} theme='borderless' onClick={handleShowModal}>
             注册|登录
           </Button>
-          <Modal
-            title={'登录'}
-            visible={showModal}
-            onCancel={handleCancel}
-            onOk={handleOk}
-          ></Modal>
+          <Modal title={'登录'} visible={showModal} onCancel={handleCancel} onOk={handleOk}></Modal>
         </div>
-      }
+      )}
     </div>
   );
 }

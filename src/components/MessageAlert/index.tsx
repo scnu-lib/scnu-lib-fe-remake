@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil';
 import { isLogin } from '../../store';
 const { Text } = Typography;
 
-export default function MessageAlert(){
+export default function MessageAlert() {
   const [isUserlogin, setIsUserLogin] = useRecoilState(isLogin);
 
   return (
@@ -16,22 +16,16 @@ export default function MessageAlert(){
         <Dropdown.Menu className={style.menuContainer}>
           <div className={style.dropDownTitle}>通知中心</div>
           <div className={style.dropDownItemContainer}>
-            { isUserlogin ?
-              null
-              : 
+            {isUserlogin ? null : (
               <div className={style.noLogin}>
                 <Text className={style.noLoginText}>登录查看信息</Text>
               </div>
-            }
+            )}
           </div>
         </Dropdown.Menu>
       }
     >
-      <Button 
-        theme='borderless'
-        type='tertiary' 
-        icon={<IconBell size='large'></IconBell>} 
-      />
+      <Button theme='borderless' type='tertiary' icon={<IconBell size='large'></IconBell>} />
     </Dropdown>
   );
 }

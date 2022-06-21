@@ -1,11 +1,10 @@
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import { createRoot } from 'react-dom/client';
 
 const container: HTMLElement = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
 root.render(<App />);
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
