@@ -1,7 +1,7 @@
 import Navigation from '../components/Nav';
 import styles from './layouts.module.scss';
 import { Icon } from '@douyinfe/semi-ui';
-import { ReactComponent as BookLogo } from '../source/bookLogo.svg';
+import { ReactComponent as BookLogo } from '../assets/svg/bookLogo.svg';
 
 export default function Layouts(props: { children: JSX.Element }) {
   return (
