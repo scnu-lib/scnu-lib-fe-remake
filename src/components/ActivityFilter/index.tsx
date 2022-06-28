@@ -18,7 +18,12 @@ export default function ActivityFilter() {
         </Tag>)
       }
       {
-        selectedTags.map(tag => <Tag key={tag} data-testid='selected-filter' >{tag}</Tag>)
+        selectedTags.map(tag => <Tag key={tag} data-testid='selected-filter' closable
+          onClose={() => setSelectedTags(selectedTags
+            .filter(selectedTag => selectedTag !== tag))
+          }>
+          { tag }
+        </Tag>)
       }
     </div>
   );

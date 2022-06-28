@@ -34,4 +34,20 @@ describe('<ActivityFilter />', () => {
 
     expect(selectedFilter).toHaveLength(1);
   });
+
+  it('should dispear when click close', () => {
+    const selector = screen.getByText(activityTags[0]);
+
+    userEvent.click(selector);
+
+    const selectedFilter = screen.queryByTestId('selected-filter');
+    const selectedFilterCancelButton = screen.getByRole('img');
+
+    userEvent.click(selectedFilterCancelButton);
+
+    const selectedFilterAfterClick = screen.queryByTestId('selected-filter');
+
+    expect(selectedFilter).toBeDefined();
+    expect(selectedFilterAfterClick).toBeNull();
+  });
 });
