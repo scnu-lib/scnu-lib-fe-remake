@@ -1,11 +1,11 @@
-import { queryByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { activityTags } from '../../constants/constants';
-import ActivityFilter from './index';
+import NormalActivity from './index';
 
 describe('<ActivityFilter />', () => {
   beforeEach(() => {
-    render(<ActivityFilter />);
+    render(<NormalActivity />);
   });
   it('should show initial selector and filter tags', () => {
     screen.getByText('标签筛选：');
@@ -50,4 +50,5 @@ describe('<ActivityFilter />', () => {
     expect(selectedFilter).toBeDefined();
     expect(selectedFilterAfterClick).toBeNull();
   });
+
 });
