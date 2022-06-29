@@ -1,20 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { activityTags } from '../../constants/constants';
-import NormalActivity from './index';
+import ActivitiesList from './index';
 
-describe('<ActivityFilter />', () => {
+describe('<ActivitiesList />', () => {
   beforeEach(() => {
-    render(<NormalActivity />);
+    render(<ActivitiesList />);
   });
+
   it('should show initial selector and filter tags', () => {
     screen.getByText('标签筛选：');
-    activityTags.forEach(tag => screen.getByText(tag));
+    const tags = activityTags.map(tag => screen.getByText(tag.name));
   });
 
   it('should show tag in filter when tag selected', () => {
     const unselectedFilter = screen.queryByTestId('selected-filter');
-    const selector = screen.getByText(activityTags[0]);
+    const selector = screen.getByText(activityTags[0].name);
 
     userEvent.click(selector);
 
@@ -22,11 +23,11 @@ describe('<ActivityFilter />', () => {
 
     expect(unselectedFilter).toBeNull();
     expect(selectedFilter).toBeDefined();
-    expect(selectedFilter.textContent).toBe(activityTags[0]);
+    expect(selectedFilter.textContent).toBe(activityTags[0].name);
   });
 
   it('should show selected once when double click', () => {
-    const selector = screen.getByText(activityTags[0]);
+    const selector = screen.getByText(activityTags[0].name);
 
     userEvent.dblClick(selector);
 
@@ -36,7 +37,7 @@ describe('<ActivityFilter />', () => {
   });
 
   it('should dispear when click close', () => {
-    const selector = screen.getByText(activityTags[0]);
+    const selector = screen.getByText(activityTags[0].name);
 
     userEvent.click(selector);
 

@@ -1,3 +1,27 @@
 // this will passed by backend
-export const activityTags = ['阅读马拉松', '旅游分享会', '周五影院',
-  '观影沙龙', '喜阅读书会', '诗会'] as const;
+export const activityTags = [
+  {
+    name: '阅读马拉松',
+    color: 'blue',
+  },
+  {
+    name: '旅游分享会',
+    color: 'red',
+  },
+  {
+    name: '周五影院',
+    color: 'green',
+  },
+  {
+    name: '观影沙龙',
+    color: 'yellow',
+  },
+  {
+    name: '喜阅读书会',
+    color: 'teal',
+  },
+  {
+    name: '诗会',
+    color: 'violet',
+  },
+] as const;

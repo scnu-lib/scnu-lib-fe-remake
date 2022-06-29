@@ -9,12 +9,12 @@ export default function ActivityFilter() {
     <div>
       标签筛选：
       {
-        activityTags.map(tag => <Tag key={tag} 
+        activityTags.map(tag => <Tag key={tag.name} 
           onClick={() => selectedTags
-            .includes(tag)
-            || setSelectedTags(selectedTags.concat(tag))}
+            .includes(tag.name)
+            || setSelectedTags(selectedTags.concat(tag.name))}
         >
-          { tag }
+          { tag.name }
         </Tag>)
       }
       {
