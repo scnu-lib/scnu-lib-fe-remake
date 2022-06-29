@@ -62,12 +62,23 @@ describe('<ActivitiesList />', () => {
 
     describe('<ActivitySearchFilter />', () => {
       it('should render search bar with placehold and search button', () => {
-        screen.getByPlaceholderText('输入标题查找');
-        
+        screen.getByPlaceholderText('输入标题搜索');
+        const searchButton = screen.getByRole('button', {
+          name: '搜索按钮',
+        });
+        expect(searchButton).toHaveTextContent('搜索');
       });
-  
+
+      it('should change input value when type title', () => {
+        const input = screen.getByPlaceholderText('输入标题搜索');
+        
+        userEvent.type(input, 'title');
+
+        expect((input.closest('input') as HTMLInputElement).value).toEqual('title');
+      });
     });
   });
+
   describe('UI testing', () => {
     it('should render initial UI correctly', () => {
       const tree = renderer
