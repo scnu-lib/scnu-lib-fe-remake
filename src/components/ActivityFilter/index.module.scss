@@ -1,0 +1,15 @@
+.filter {
+  display: flex;
+  flex-direction: row;
+}
+.filterTags {
+  display: flex;
+  flex-direction: column;
+}
+.unselectedTags {
+  justify-content: flex-start;
+  width: 100%;
+}
+.selectedTags {
+  width: 100%;
+}

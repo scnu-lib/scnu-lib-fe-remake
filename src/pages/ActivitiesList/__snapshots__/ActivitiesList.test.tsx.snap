@@ -2,97 +2,113 @@
 
 exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = `
 <div>
-  <div>
+  <div
+    className="filter"
+  >
     标签筛选：
     <div
-      aria-label="Tag: 阅读马拉松"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-blue-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
+      className="semi-space filterTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
       style={Object {}}
-      tabIndex={0}
     >
       <div
-        className="semi-tag-content"
+        className="semi-space unselectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+        style={Object {}}
       >
-        阅读马拉松
+        <div
+          aria-label="Tag: 阅读马拉松"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-blue-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            阅读马拉松
+          </div>
+        </div>
+        <div
+          aria-label="Tag: 旅游分享会"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            旅游分享会
+          </div>
+        </div>
+        <div
+          aria-label="Tag: 周五影院"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            周五影院
+          </div>
+        </div>
+        <div
+          aria-label="Tag: 观影沙龙"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            观影沙龙
+          </div>
+        </div>
+        <div
+          aria-label="Tag: 喜阅读书会"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            喜阅读书会
+          </div>
+        </div>
+        <div
+          aria-label="Tag: 诗会"
+          className="semi-tag semi-tag-default semi-tag-light semi-tag-violet-light"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <div
+            className="semi-tag-content"
+          >
+            诗会
+          </div>
+        </div>
       </div>
-    </div>
-    <div
-      aria-label="Tag: 旅游分享会"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex={0}
-    >
       <div
-        className="semi-tag-content"
-      >
-        旅游分享会
-      </div>
-    </div>
-    <div
-      aria-label="Tag: 周五影院"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex={0}
-    >
-      <div
-        className="semi-tag-content"
-      >
-        周五影院
-      </div>
-    </div>
-    <div
-      aria-label="Tag: 观影沙龙"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex={0}
-    >
-      <div
-        className="semi-tag-content"
-      >
-        观影沙龙
-      </div>
-    </div>
-    <div
-      aria-label="Tag: 喜阅读书会"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex={0}
-    >
-      <div
-        className="semi-tag-content"
-      >
-        喜阅读书会
-      </div>
-    </div>
-    <div
-      aria-label="Tag: 诗会"
-      className="semi-tag semi-tag-default semi-tag-light semi-tag-violet-light"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="button"
-      style={Object {}}
-      tabIndex={0}
-    >
-      <div
-        className="semi-tag-content"
-      >
-        诗会
-      </div>
+        className="semi-space selectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+        style={Object {}}
+      />
     </div>
   </div>
 </div>

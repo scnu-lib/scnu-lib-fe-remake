@@ -1,30 +1,46 @@
 import React from 'react';
-import { Tag } from '@douyinfe/semi-ui';
+import { Tag, Space } from '@douyinfe/semi-ui';
 import { activityTags } from '../../constants/constants';
+import styles from './index.module.scss';
 
 export default function ActivityFilter() {
-  const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = React.useState<{
+    name: string,
+    color: string,
+  }[]>([]);
 
   return (
-    <div>
+    <div className={styles.filter}>
       标签筛选：
-      {
-        activityTags.map(tag => <Tag key={tag.name} color={tag.color}
-          onClick={() => selectedTags
-            .includes(tag.name)
-            || setSelectedTags(selectedTags.concat(tag.name))}
-        >
-          { tag.name }
-        </Tag>)
-      }
-      {
-        selectedTags.map(tag => <Tag key={tag} data-testid='selected-filter' closable
-          onClose={() => setSelectedTags(selectedTags
-            .filter(selectedTag => selectedTag !== tag))
-          }>
-          { tag }
-        </Tag>)
-      }
+      <Space className={styles.filterTags}>
+        <Space className={styles.unselectedTags}>
+          {
+            activityTags.map(tag => <Tag 
+              key={tag.name} 
+              color={tag.color}
+              onClick={() => selectedTags
+                .includes(tag)
+            || setSelectedTags(selectedTags.concat(tag))}
+            >
+              { tag.name }
+            </Tag>)
+          }
+        </Space>
+        <Space className={styles.selectedTags}>
+          {
+            selectedTags.map(tag => <Tag
+              key={tag.name}
+              data-testid='selected-filter'
+              closable
+              color={tag.color as any}
+              onClose={() => setSelectedTags(selectedTags
+                .filter(selectedTag => selectedTag !== tag))
+              }>
+              { tag.name }
+            </Tag>)
+          }
+        </Space>
+      </Space>
     </div>
   );
 }
