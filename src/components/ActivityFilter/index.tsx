@@ -9,7 +9,7 @@ export default function ActivityFilter() {
     <div>
       标签筛选：
       {
-        activityTags.map(tag => <Tag key={tag.name} 
+        activityTags.map(tag => <Tag key={tag.name} color={tag.color}
           onClick={() => selectedTags
             .includes(tag.name)
             || setSelectedTags(selectedTags.concat(tag.name))}
