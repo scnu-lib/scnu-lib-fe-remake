@@ -1,0 +1,28 @@
+.activityImg {
+  width: 280px;
+  height: 150px;
+  border: 2px black solid;
+  border-radius: 4px;
+}
+.peopleNumber {
+  height:16px;
+  display: flex;
+  align-items: center;
+  color: var(--semi-color-text-3);
+}
+.activityItemMain {
+  height: 150px;
+  justify-content: space-between;
+}
+.activityList {
+  padding: 0 18px 0 18px;
+
+  :global {
+    .semi-list-item {
+      margin: 8px 0 8px 0;
+    }
+    .semi-list-item-body-header {
+      margin-right: 24px;
+    }
+  }
+}

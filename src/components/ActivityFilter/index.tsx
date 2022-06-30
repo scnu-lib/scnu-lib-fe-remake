@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, Space } from '@douyinfe/semi-ui';
+import { Tag, Space, Typography } from '@douyinfe/semi-ui';
 import { activityTags } from '../../constants/constants';
 import styles from './index.module.scss';
 
@@ -8,10 +8,11 @@ export default function ActivityFilter() {
     name: string,
     color: string,
   }[]>([]);
+  const { Text } = Typography;
 
   return (
     <div className={styles.filter}>
-      标签筛选：
+      <Text>标签筛选：</Text>
       <Space className={styles.filterTags}>
         <Space className={styles.unselectedTags}>
           {

@@ -1,42 +1,64 @@
 import React from 'react';
-import { Avatar, AvatarGroup, Empty, List, Tag } from '@douyinfe/semi-ui';
+import { Empty, List, Tag, Space } from '@douyinfe/semi-ui';
 import { IllustrationNoResult } from '@douyinfe/semi-illustrations';
 import { ActivityType } from '../../types/types';
+import styles from './index.module.scss';
+import { Typography } from '@douyinfe/semi-ui';
+import { IconUserStroked } from '@douyinfe/semi-icons';
 
 interface ActivitiesProps {
   dataSource: ActivityType[]
 }
 
 export default function Activities({ dataSource }: ActivitiesProps) {
+  const { Text, Title, Paragraph } = Typography;
+
   return (
     <div data-testid='activity-list'>
       {
         dataSource && dataSource.length 
           ? <List 
             dataSource={dataSource}
+            className={styles.activityList}
+            size='small'
             renderItem={item => (
               <List.Item
                 header={
-                  <img alt='activity img' src={item.img} />
+                  <img 
+                    alt='activity img'
+                    src={item.img} 
+                    className={styles.activityImg}
+                  />
                 }
                 main={
-                  <div>
-                    <span style={{ color: 'var(--semi-color-text-0)', fontWeight: 500 }}>{item.title}</span>
-                    {item.tags.map(tag => (<Tag 
-                      key={tag.name} 
-                      color={tag.color as any}
-                    >
-                      {tag.name}
-                    </Tag>))}
-                    <span>{item.register_date}</span>
-                    <span>{item.start_date} ~ {item.end_date}</span>
-                    <span>{item.num_of_people} / {item.max_num_of_people}</span>
-                    <span>{item.spot}</span>
-                    <p>
-                      { item.description }
-                    </p>
-                    {item.hosts[0]}
-                  </div>
+                  <Space vertical align='start' className={styles.activityItemMain}>
+                    <Space vertical align='start'>
+                      <Space align='start'>
+                        <Title heading={5}>{item.title}</Title>
+                        {item.tags.map(tag => (<Tag 
+                          key={tag.name} 
+                          color={tag.color as any}
+                        >
+                          {tag.name}
+                        </Tag>))}
+                      </Space>
+                      <Text type='quaternary' size='small'>
+                        负责人：{item.hosts[0]}{' '}
+                        活动地点：{item.spot}{' '}
+                        报名截止时间：{item.register_date}{' '}
+                        活动时间：{item.start_date} ~ {item.end_date}
+                      </Text>
+                      <Paragraph spacing='extended' >
+                        { item.description }
+                      </Paragraph>
+                    </Space>
+                    <div className={styles.peopleNumber}>
+                      <IconUserStroked style={{marginRight: '2px'}}/>
+                      <Text size='small' type='quaternary'>
+                        {item.num_of_people} / {item.max_num_of_people}
+                      </Text>
+                    </div>
+                  </Space>
                 }
               />
             )}
