@@ -24,4 +24,4 @@ export const activityTags = [
     name: '诗会',
     color: 'violet',
   },
-] as const;
+];

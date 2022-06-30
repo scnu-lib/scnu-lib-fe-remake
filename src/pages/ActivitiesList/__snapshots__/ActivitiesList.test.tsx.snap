@@ -1,197 +1,296 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = `
-<div
-  className="filterBar"
->
+<div>
   <div
-    className="filter"
+    className="filterBar"
   >
-    标签筛选：
     <div
-      className="semi-space filterTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
-      style={Object {}}
+      className="filter"
     >
+      标签筛选：
       <div
-        className="semi-space unselectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+        className="semi-space filterTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
         style={Object {}}
       >
         <div
-          aria-label="Tag: 阅读马拉松"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-blue-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
+          className="semi-space unselectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
           style={Object {}}
-          tabIndex={0}
         >
           <div
-            className="semi-tag-content"
-          >
-            阅读马拉松
-          </div>
-        </div>
-        <div
-          aria-label="Tag: 旅游分享会"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          style={Object {}}
-          tabIndex={0}
-        >
-          <div
-            className="semi-tag-content"
-          >
-            旅游分享会
-          </div>
-        </div>
-        <div
-          aria-label="Tag: 周五影院"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          style={Object {}}
-          tabIndex={0}
-        >
-          <div
-            className="semi-tag-content"
-          >
-            周五影院
-          </div>
-        </div>
-        <div
-          aria-label="Tag: 观影沙龙"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          style={Object {}}
-          tabIndex={0}
-        >
-          <div
-            className="semi-tag-content"
-          >
-            观影沙龙
-          </div>
-        </div>
-        <div
-          aria-label="Tag: 喜阅读书会"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          style={Object {}}
-          tabIndex={0}
-        >
-          <div
-            className="semi-tag-content"
-          >
-            喜阅读书会
-          </div>
-        </div>
-        <div
-          aria-label="Tag: 诗会"
-          className="semi-tag semi-tag-default semi-tag-light semi-tag-violet-light"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          role="button"
-          style={Object {}}
-          tabIndex={0}
-        >
-          <div
-            className="semi-tag-content"
-          >
-            诗会
-          </div>
-        </div>
-      </div>
-      <div
-        className="semi-space selectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
-        style={Object {}}
-      />
-    </div>
-  </div>
-  <div>
-    <div
-      className="semi-space semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
-      style={Object {}}
-    >
-      <div
-        className="semi-input-wrapper semi-input-wrapper__with-prefix semi-input-wrapper-default"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="semi-input-prefix semi-input-prefix-icon"
-          onClick={[Function]}
-          onMouseDown={[Function]}
-        >
-          <span
-            aria-label="search"
-            className="semi-icon semi-icon-default semi-icon-search"
-            role="img"
+            aria-label="Tag: 阅读马拉松"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-blue-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
             style={Object {}}
+            tabIndex={0}
           >
-            <svg
-              aria-hidden={true}
-              fill="none"
-              focusable={false}
-              height="1em"
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              className="semi-tag-content"
             >
-              <path
-                clipRule="evenodd"
-                d="M10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19C12.3054 19 13.9794 18.4371 15.356 17.4773L19.4393 21.5606C20.0251 22.1464 20.9749 22.1464 21.5606 21.5606C22.1464 20.9749 22.1464 20.0251 21.5606 19.4393L17.4773 15.356C18.4371 13.9794 19 12.3054 19 10.5C19 5.80558 15.1944 2 10.5 2ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z"
-                fill="currentColor"
-                fillRule="evenodd"
-              />
-            </svg>
-          </span>
+              阅读马拉松
+            </div>
+          </div>
+          <div
+            aria-label="Tag: 旅游分享会"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={Object {}}
+            tabIndex={0}
+          >
+            <div
+              className="semi-tag-content"
+            >
+              旅游分享会
+            </div>
+          </div>
+          <div
+            aria-label="Tag: 周五影院"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={Object {}}
+            tabIndex={0}
+          >
+            <div
+              className="semi-tag-content"
+            >
+              周五影院
+            </div>
+          </div>
+          <div
+            aria-label="Tag: 观影沙龙"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={Object {}}
+            tabIndex={0}
+          >
+            <div
+              className="semi-tag-content"
+            >
+              观影沙龙
+            </div>
+          </div>
+          <div
+            aria-label="Tag: 喜阅读书会"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={Object {}}
+            tabIndex={0}
+          >
+            <div
+              className="semi-tag-content"
+            >
+              喜阅读书会
+            </div>
+          </div>
+          <div
+            aria-label="Tag: 诗会"
+            className="semi-tag semi-tag-default semi-tag-light semi-tag-violet-light"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            style={Object {}}
+            tabIndex={0}
+          >
+            <div
+              className="semi-tag-content"
+            >
+              诗会
+            </div>
+          </div>
         </div>
-        <input
-          className="semi-input semi-input-default"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          onKeyPress={[Function]}
-          onKeyUp={[Function]}
-          placeholder="输入标题搜索"
-          readOnly={false}
-          style={
-            Object {
-              "paddingLeft": "",
-            }
-          }
-          type="text"
-          value=""
+        <div
+          className="semi-space selectedTags semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+          style={Object {}}
         />
       </div>
-      <button
-        aria-disabled={false}
-        aria-label="搜索按钮"
-        className="semi-button semi-button-primary semi-button-light"
-        disabled={false}
-        onClick={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        type="button"
+    </div>
+    <div>
+      <div
+        className="semi-space semi-space-align-center semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+        style={Object {}}
       >
-        <span
-          className="semi-button-content"
+        <div
+          className="semi-input-wrapper semi-input-wrapper__with-prefix semi-input-wrapper-default"
           onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
-          搜索
-        </span>
-      </button>
+          <div
+            className="semi-input-prefix semi-input-prefix-icon"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+          >
+            <span
+              aria-label="search"
+              className="semi-icon semi-icon-default semi-icon-search"
+              role="img"
+              style={Object {}}
+            >
+              <svg
+                aria-hidden={true}
+                fill="none"
+                focusable={false}
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M10.5 2C5.80558 2 2 5.80558 2 10.5C2 15.1944 5.80558 19 10.5 19C12.3054 19 13.9794 18.4371 15.356 17.4773L19.4393 21.5606C20.0251 22.1464 20.9749 22.1464 21.5606 21.5606C22.1464 20.9749 22.1464 20.0251 21.5606 19.4393L17.4773 15.356C18.4371 13.9794 19 12.3054 19 10.5C19 5.80558 15.1944 2 10.5 2ZM5 10.5C5 7.46243 7.46243 5 10.5 5C13.5376 5 16 7.46243 16 10.5C16 13.5376 13.5376 16 10.5 16C7.46243 16 5 13.5376 5 10.5Z"
+                  fill="currentColor"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </span>
+          </div>
+          <input
+            className="semi-input semi-input-default"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            onKeyPress={[Function]}
+            onKeyUp={[Function]}
+            placeholder="输入标题搜索"
+            readOnly={false}
+            style={
+              Object {
+                "paddingLeft": "",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          aria-disabled={false}
+          aria-label="搜索按钮"
+          className="semi-button semi-button-primary semi-button-light"
+          disabled={false}
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          type="button"
+        >
+          <span
+            className="semi-button-content"
+            onClick={[Function]}
+          >
+            搜索
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    data-testid="activity-list"
+  >
+    <div
+      className="semi-list semi-list-default semi-list-split"
+    >
+      <div
+        className="semi-spin semi-spin-large semi-spin-block semi-spin-hidden"
+      >
+        <div
+          className="semi-spin-children"
+        >
+          <ul
+            className="semi-list-items"
+          >
+            <li
+              className="semi-list-item"
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <div
+                className="semi-list-item-body semi-list-item-body-flex-start"
+              >
+                <div
+                  className="semi-list-item-body-header"
+                >
+                  http://www.baidu.com
+                </div>
+                <div
+                  className="semi-list-item-body-main"
+                >
+                  <div>
+                    <span
+                      style={
+                        Object {
+                          "color": "var(--semi-color-text-0)",
+                          "fontWeight": 500,
+                        }
+                      }
+                    >
+                      string
+                    </span>
+                    <div
+                      aria-label="Tag: 观影沙龙"
+                      className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <div
+                        className="semi-tag-content"
+                      >
+                        观影沙龙
+                      </div>
+                    </div>
+                    <div
+                      aria-label="Tag: 喜阅读书会"
+                      className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <div
+                        className="semi-tag-content"
+                      >
+                        喜阅读书会
+                      </div>
+                    </div>
+                    <span>
+                      2022-04-30T00:00:00
+                    </span>
+                    <span>
+                      2022-05-30T00:00:00
+                       ~ 
+                      2022-06-30T00:00:00
+                    </span>
+                    <span>
+                      0
+                       / 
+                      1
+                    </span>
+                    <span>
+                      scnu
+                    </span>
+                    <p>
+                      this is a activity.
+                    </p>
+                    624e70bc1e172b1241a0b3ba
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

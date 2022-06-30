@@ -15,12 +15,12 @@ describe('<ActivitiesList />', () => {
     describe('<ActivityFilter />', () => {
       it('should show initial selector and filter tags', () => {
         screen.getByText('标签筛选：');
-        activityTags.map(tag => screen.getByText(tag.name));
+        activityTags.map(tag => screen.getAllByText(tag.name)[0]);
       });
     
       it('should show tag in filter when tag selected', () => {
         const unselectedFilter = screen.queryByTestId('selected-filter');
-        const selector = screen.getByText(activityTags[0].name);
+        const selector = screen.getAllByText(activityTags[0].name)[0];
     
         userEvent.click(selector);
     
@@ -33,7 +33,7 @@ describe('<ActivitiesList />', () => {
     
       it('should show selected once when double click', () => {
         
-        const selector = screen.getByText(activityTags[0].name);
+        const selector = screen.getAllByText(activityTags[0].name)[0];
     
         userEvent.dblClick(selector);
     
@@ -44,7 +44,7 @@ describe('<ActivitiesList />', () => {
     
       it('should dispear when click close', () => {
         const { container } = root;
-        const selector = screen.getByText(activityTags[0].name);
+        const selector = screen.getAllByText(activityTags[0].name)[0];
     
         userEvent.click(selector);
     

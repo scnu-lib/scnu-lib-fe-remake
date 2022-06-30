@@ -17,7 +17,7 @@ export default function ActivityFilter() {
           {
             activityTags.map(tag => <Tag 
               key={tag.name} 
-              color={tag.color}
+              color={tag.color as any}
               onClick={() => selectedTags
                 .includes(tag)
             || setSelectedTags(selectedTags.concat(tag))}
