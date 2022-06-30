@@ -224,7 +224,10 @@ exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = 
                 <div
                   className="semi-list-item-body-header"
                 >
-                  http://www.baidu.com
+                  <img
+                    alt="activity img"
+                    src="http://www.baidu.com"
+                  />
                 </div>
                 <div
                   className="semi-list-item-body-main"

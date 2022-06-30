@@ -17,7 +17,7 @@ export default function Activities({ dataSource }: ActivitiesProps) {
             renderItem={item => (
               <List.Item
                 header={
-                  item.img
+                  <img alt='activity img' src={item.img} />
                 }
                 main={
                   <div>
