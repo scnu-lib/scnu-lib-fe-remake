@@ -2,6 +2,7 @@ import React from 'react';
 import { Tag, Space, Typography } from '@douyinfe/semi-ui';
 import { activityTags } from '../../constants/constants';
 import styles from './index.module.scss';
+import { TagColor } from '@douyinfe/semi-ui/lib/es/tag';
 
 interface ActivityFilterProps {
   selectedTags: typeof activityTags;
@@ -34,7 +35,7 @@ export default function ActivityFilter({ selectedTags, handleChangeSelectedTags 
               key={tag.name}
               data-testid='selected-filter'
               closable
-              color={tag.color as any}
+              color={tag.color as TagColor}
               onClose={() => handleChangeSelectedTags(selectedTags
                 .filter(selectedTag => selectedTag !== tag))
               }>
