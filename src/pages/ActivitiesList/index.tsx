@@ -5,6 +5,7 @@ import ActivitySearchFilter from '../../components/ActivitySearchFilter';
 import { activityTags, imgLinkStub } from '../../constants/constants';
 import styles from './index.module.scss';
 import { Divider } from '@douyinfe/semi-ui';
+import { activityTagsType } from '../../types/types';
 
 export default function ActivitiesList() {
   const dataSource = [
@@ -42,7 +43,7 @@ export default function ActivitiesList() {
     color: string,
   }[]>([]);
 
-  const handleChangeSelectedTags = (newSelectedTags: typeof activityTags) => {
+  const handleChangeSelectedTags = (newSelectedTags: activityTagsType) => {
     setSelectedTags(newSelectedTags);
   };
 

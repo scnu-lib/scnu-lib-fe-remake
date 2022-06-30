@@ -14,3 +14,5 @@ export interface ActivityType {
   hosts: string[];
   is_allow_volunteer: boolean;
 };
+
+export type activityTagsType = typeof activityTags;

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Empty, List, Tag, Space } from '@douyinfe/semi-ui';
 import { IllustrationNoResult } from '@douyinfe/semi-illustrations';
-import { ActivityType } from '../../types/types';
+import { activityTagsType, ActivityType } from '../../types/types';
 import styles from './index.module.scss';
 import { Typography } from '@douyinfe/semi-ui';
 import { IconUserStroked } from '@douyinfe/semi-icons';
-import { activityTags } from '../../constants/constants';
+import { TagColor } from '@douyinfe/semi-ui/lib/es/tag/interface';
 
 interface ActivitiesProps {
   dataSource: ActivityType[]
-  selectedTags: typeof activityTags
+  selectedTags: activityTagsType
 }
 
 export default function Activities({ dataSource, selectedTags }: ActivitiesProps) {
@@ -48,7 +48,7 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                         <Title heading={5}>{item.title}</Title>
                         {item.tags.map(tag => (<Tag 
                           key={tag.name} 
-                          color={tag.color as any}
+                          color={tag.color as TagColor}
                         >
                           {tag.name}
                         </Tag>))}
