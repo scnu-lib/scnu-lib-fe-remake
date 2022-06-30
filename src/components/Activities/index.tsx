@@ -5,13 +5,24 @@ import { ActivityType } from '../../types/types';
 import styles from './index.module.scss';
 import { Typography } from '@douyinfe/semi-ui';
 import { IconUserStroked } from '@douyinfe/semi-icons';
+import { activityTags } from '../../constants/constants';
 
 interface ActivitiesProps {
   dataSource: ActivityType[]
+  selectedTags: typeof activityTags
 }
 
-export default function Activities({ dataSource }: ActivitiesProps) {
+export default function Activities({ dataSource, selectedTags }: ActivitiesProps) {
   const { Text, Title, Paragraph } = Typography;
+  if(selectedTags && selectedTags.length !== 0) 
+    dataSource = dataSource // filter all activity with selected tags
+      .filter(activity => selectedTags
+
+      // @ts-expect-error use reduce with default value false can't
+      // assign boolean or true
+        .reduce((res, selectedTag) => res || activity.tags
+          .map(tag => tag.name).includes(selectedTag.name),
+        false));
 
   return (
     <div data-testid='activity-list'>

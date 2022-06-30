@@ -32,18 +32,29 @@ export default function ActivitiesList() {
       max_num_of_people: 1,
       num_of_people: 0,
       spot: 'scnu',
-      tags: [activityTags[3], activityTags[4]],
+      tags: [activityTags[1], activityTags[2]],
       hosts: ['624e70bc1e172b1241a0b3ba'],
       is_allow_volunteer: true,
     }
   ];
+  const [selectedTags, setSelectedTags] = React.useState<{
+    name: string,
+    color: string,
+  }[]>([]);
+
+  const handleChangeSelectedTags = (newSelectedTags: typeof activityTags) => {
+    setSelectedTags(newSelectedTags);
+  };
 
   return <div className={styles.activityPage} >
     <div className={styles.filterBar} >
-      <ActivityFilter />
+      <ActivityFilter
+        selectedTags={selectedTags} 
+        handleChangeSelectedTags={handleChangeSelectedTags} 
+      />
       <ActivitySearchFilter />
     </div>
     <Divider margin='12px'/>
-    <Activities dataSource={dataSource.concat(dataSource)} />
+    <Activities selectedTags={selectedTags} dataSource={dataSource.concat(dataSource)} />
   </div>;
 }

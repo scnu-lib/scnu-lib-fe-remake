@@ -3,11 +3,12 @@ import { Tag, Space, Typography } from '@douyinfe/semi-ui';
 import { activityTags } from '../../constants/constants';
 import styles from './index.module.scss';
 
-export default function ActivityFilter() {
-  const [selectedTags, setSelectedTags] = React.useState<{
-    name: string,
-    color: string,
-  }[]>([]);
+interface ActivityFilterProps {
+  selectedTags: typeof activityTags;
+  handleChangeSelectedTags: (newSelectedTags: typeof activityTags) => void;
+}
+
+export default function ActivityFilter({ selectedTags, handleChangeSelectedTags }: ActivityFilterProps) {
   const { Text } = Typography;
 
   return (
@@ -21,7 +22,7 @@ export default function ActivityFilter() {
               color={tag.color as any}
               onClick={() => selectedTags
                 .includes(tag)
-            || setSelectedTags(selectedTags.concat(tag))}
+            || handleChangeSelectedTags(selectedTags.concat(tag))}
             >
               { tag.name }
             </Tag>)
@@ -34,7 +35,7 @@ export default function ActivityFilter() {
               data-testid='selected-filter'
               closable
               color={tag.color as any}
-              onClose={() => setSelectedTags(selectedTags
+              onClose={() => handleChangeSelectedTags(selectedTags
                 .filter(selectedTag => selectedTag !== tag))
               }>
               { tag.name }

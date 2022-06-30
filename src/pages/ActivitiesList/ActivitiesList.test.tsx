@@ -58,6 +58,21 @@ describe('<ActivitiesList />', () => {
         expect(selectedFilter).toBeDefined();
         expect(selectedFilterAfterClick).toBeNull();
       });  
+
+      it('should filtered list when select tags', () => {
+        const selector = screen.queryAllByText(activityTags[3].name)[0];
+        const { container } = root;
+        const preList = container.getElementsByClassName('semi-list-items').item(0);
+        expect(preList).toHaveTextContent(activityTags[1].name);
+
+        userEvent.click(selector);
+
+        const postList = container.getElementsByClassName('semi-list-items').item(0);
+
+        
+        expect(postList).not.toHaveTextContent(activityTags[1].name);
+        expect(postList).toHaveTextContent(activityTags[3].name);
+      });
     });  
 
     describe('<ActivitySearchFilter />', () => {

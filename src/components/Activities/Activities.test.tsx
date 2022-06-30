@@ -5,7 +5,7 @@ import Activities from './index';
 describe('<Activities />', () => {  
   it('should show empty state when data is empty', () => {
     const returnEpmtyData = jest.fn().mockReturnValue([]);
-    const { container } = render(<Activities dataSource={returnEpmtyData()} />);
+    const { container } = render(<Activities selectedTags={[]} dataSource={returnEpmtyData()} />);
     const emptyState = container.getElementsByClassName('semi-empty');
 
     expect(emptyState).toHaveLength(1);
@@ -14,7 +14,7 @@ describe('<Activities />', () => {
   });
 
   it('should show text when dataSource have a item', () => {
-    const { container } = render(<Activities dataSource={activityStub} />);
+    const { container } = render(<Activities selectedTags={[]} dataSource={activityStub} />);
     const list = screen.getByTestId('activity-list');
 
     expect(container.getElementsByClassName('semi-empty')).toHaveLength(0);

@@ -403,162 +403,27 @@ exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = 
                           string
                         </h5>
                         <div
-                          aria-label="Tag: 观影沙龙"
-                          className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
+                          aria-label="Tag: 旅游分享会"
+                          className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
                           onClick={[Function]}
                           style={Object {}}
                         >
                           <div
                             className="semi-tag-content"
                           >
-                            观影沙龙
+                            旅游分享会
                           </div>
                         </div>
                         <div
-                          aria-label="Tag: 喜阅读书会"
-                          className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
+                          aria-label="Tag: 周五影院"
+                          className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
                           onClick={[Function]}
                           style={Object {}}
                         >
                           <div
                             className="semi-tag-content"
                           >
-                            喜阅读书会
-                          </div>
-                        </div>
-                      </div>
-                      <span
-                        className="semi-typography semi-typography-quaternary semi-typography-small semi-typography-normal"
-                        style={Object {}}
-                      >
-                        负责人：
-                        624e70bc1e172b1241a0b3ba
-                         
-                        活动地点：
-                        scnu
-                         
-                        报名截止时间：
-                        2022-04-30T00:00:00
-                         
-                        活动时间：
-                        2022-05-30T00:00:00
-                         ~ 
-                        2022-06-30T00:00:00
-                      </span>
-                      <p
-                        className="semi-typography semi-typography-paragraph semi-typography-primary semi-typography-normal semi-typography-extended"
-                        style={Object {}}
-                      >
-                        this is a activity.
-                      </p>
-                    </div>
-                    <div
-                      className="peopleNumber"
-                    >
-                      <span
-                        aria-label="user_stroked"
-                        className="semi-icon semi-icon-default semi-icon-user_stroked"
-                        role="img"
-                        style={
-                          Object {
-                            "marginRight": "2px",
-                          }
-                        }
-                      >
-                        <svg
-                          aria-hidden={true}
-                          fill="none"
-                          focusable={false}
-                          height="1em"
-                          viewBox="0 0 24 24"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12 14C8.7 14 6 11.3 6 8C6 4.7 8.7 2 12 2C15.3 2 18 4.7 18 8C18 11.3 15.3 14 12 14ZM12 4C9.8 4 8 5.8 8 8C8 10.2 9.8 12 12 12C14.2 12 16 10.2 16 8C16 5.8 14.2 4 12 4Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M21.9 20.6C21.8 20.4 19.6 15 12 15C4.40002 15 2.20002 20.4 2.10002 20.6C1.90002 21.1 2.10002 21.7 2.70002 21.9C3.20002 22.1 3.80002 21.9 4.00002 21.4C4.00002 21.2 5.80002 17 12 17C18.2 17 20 21.2 20.1 21.4C20.3 21.9 20.9 22.2 21.4 21.9C21.9 21.7 22.1 21.1 21.9 20.6Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        className="semi-typography semi-typography-quaternary semi-typography-small semi-typography-normal"
-                        style={Object {}}
-                      >
-                        0
-                         / 
-                        1
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              className="semi-list-item"
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-            >
-              <div
-                className="semi-list-item-body semi-list-item-body-flex-start"
-              >
-                <div
-                  className="semi-list-item-body-header"
-                >
-                  <img
-                    alt="activity img"
-                    className="activityImg"
-                    src="https://clean99.github.io/img/sicpjs/sicpjs.jpeg"
-                  />
-                </div>
-                <div
-                  className="semi-list-item-body-main"
-                >
-                  <div
-                    className="semi-space activityItemMain semi-space-align-start semi-space-vertical semi-space-tight-horizontal semi-space-tight-vertical"
-                    style={Object {}}
-                  >
-                    <div
-                      className="semi-space semi-space-align-start semi-space-vertical semi-space-tight-horizontal semi-space-tight-vertical"
-                      style={Object {}}
-                    >
-                      <div
-                        className="semi-space semi-space-align-start semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
-                        style={Object {}}
-                      >
-                        <h5
-                          className="semi-typography semi-typography-primary semi-typography-normal semi-typography-h5"
-                          style={Object {}}
-                        >
-                          string
-                        </h5>
-                        <div
-                          aria-label="Tag: 观影沙龙"
-                          className="semi-tag semi-tag-default semi-tag-light semi-tag-yellow-light"
-                          onClick={[Function]}
-                          style={Object {}}
-                        >
-                          <div
-                            className="semi-tag-content"
-                          >
-                            观影沙龙
-                          </div>
-                        </div>
-                        <div
-                          aria-label="Tag: 喜阅读书会"
-                          className="semi-tag semi-tag-default semi-tag-light semi-tag-teal-light"
-                          onClick={[Function]}
-                          style={Object {}}
-                        >
-                          <div
-                            className="semi-tag-content"
-                          >
-                            喜阅读书会
+                            周五影院
                           </div>
                         </div>
                       </div>
@@ -694,6 +559,141 @@ exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = 
                             className="semi-tag-content"
                           >
                             喜阅读书会
+                          </div>
+                        </div>
+                      </div>
+                      <span
+                        className="semi-typography semi-typography-quaternary semi-typography-small semi-typography-normal"
+                        style={Object {}}
+                      >
+                        负责人：
+                        624e70bc1e172b1241a0b3ba
+                         
+                        活动地点：
+                        scnu
+                         
+                        报名截止时间：
+                        2022-04-30T00:00:00
+                         
+                        活动时间：
+                        2022-05-30T00:00:00
+                         ~ 
+                        2022-06-30T00:00:00
+                      </span>
+                      <p
+                        className="semi-typography semi-typography-paragraph semi-typography-primary semi-typography-normal semi-typography-extended"
+                        style={Object {}}
+                      >
+                        this is a activity.
+                      </p>
+                    </div>
+                    <div
+                      className="peopleNumber"
+                    >
+                      <span
+                        aria-label="user_stroked"
+                        className="semi-icon semi-icon-default semi-icon-user_stroked"
+                        role="img"
+                        style={
+                          Object {
+                            "marginRight": "2px",
+                          }
+                        }
+                      >
+                        <svg
+                          aria-hidden={true}
+                          fill="none"
+                          focusable={false}
+                          height="1em"
+                          viewBox="0 0 24 24"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 14C8.7 14 6 11.3 6 8C6 4.7 8.7 2 12 2C15.3 2 18 4.7 18 8C18 11.3 15.3 14 12 14ZM12 4C9.8 4 8 5.8 8 8C8 10.2 9.8 12 12 12C14.2 12 16 10.2 16 8C16 5.8 14.2 4 12 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M21.9 20.6C21.8 20.4 19.6 15 12 15C4.40002 15 2.20002 20.4 2.10002 20.6C1.90002 21.1 2.10002 21.7 2.70002 21.9C3.20002 22.1 3.80002 21.9 4.00002 21.4C4.00002 21.2 5.80002 17 12 17C18.2 17 20 21.2 20.1 21.4C20.3 21.9 20.9 22.2 21.4 21.9C21.9 21.7 22.1 21.1 21.9 20.6Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="semi-typography semi-typography-quaternary semi-typography-small semi-typography-normal"
+                        style={Object {}}
+                      >
+                        0
+                         / 
+                        1
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              className="semi-list-item"
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <div
+                className="semi-list-item-body semi-list-item-body-flex-start"
+              >
+                <div
+                  className="semi-list-item-body-header"
+                >
+                  <img
+                    alt="activity img"
+                    className="activityImg"
+                    src="https://clean99.github.io/img/sicpjs/sicpjs.jpeg"
+                  />
+                </div>
+                <div
+                  className="semi-list-item-body-main"
+                >
+                  <div
+                    className="semi-space activityItemMain semi-space-align-start semi-space-vertical semi-space-tight-horizontal semi-space-tight-vertical"
+                    style={Object {}}
+                  >
+                    <div
+                      className="semi-space semi-space-align-start semi-space-vertical semi-space-tight-horizontal semi-space-tight-vertical"
+                      style={Object {}}
+                    >
+                      <div
+                        className="semi-space semi-space-align-start semi-space-horizontal semi-space-tight-horizontal semi-space-tight-vertical"
+                        style={Object {}}
+                      >
+                        <h5
+                          className="semi-typography semi-typography-primary semi-typography-normal semi-typography-h5"
+                          style={Object {}}
+                        >
+                          string
+                        </h5>
+                        <div
+                          aria-label="Tag: 旅游分享会"
+                          className="semi-tag semi-tag-default semi-tag-light semi-tag-red-light"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <div
+                            className="semi-tag-content"
+                          >
+                            旅游分享会
+                          </div>
+                        </div>
+                        <div
+                          aria-label="Tag: 周五影院"
+                          className="semi-tag semi-tag-default semi-tag-light semi-tag-green-light"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <div
+                            className="semi-tag-content"
+                          >
+                            周五影院
                           </div>
                         </div>
                       </div>
