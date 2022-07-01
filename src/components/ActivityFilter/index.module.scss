@@ -3,14 +3,17 @@
   flex-direction: row;
   height: 50px;
 }
+
 .filterTags {
   display: flex;
   flex-direction: column;
 }
+
 .unselectedTags {
   justify-content: flex-start;
   width: 100%;
 }
+
 .selectedTags {
   width: 100%;
 }
