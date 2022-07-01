@@ -9,6 +9,7 @@ export default function ActivitySearchFilter() {
     <div>
       <Space>
         <Input
+          width={'250px'}
           prefix={<IconSearch />}
           placeholder='输入标题搜索'
           value={searchText}

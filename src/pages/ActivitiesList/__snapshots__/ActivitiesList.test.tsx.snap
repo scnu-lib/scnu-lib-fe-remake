@@ -180,6 +180,7 @@ exports[`<ActivitiesList /> UI testing should render initial UI correctly 1`] = 
             }
             type="text"
             value=""
+            width="250px"
           />
         </div>
         <button
