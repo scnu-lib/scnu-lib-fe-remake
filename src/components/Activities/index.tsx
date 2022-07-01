@@ -17,12 +17,9 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
   if(selectedTags && selectedTags.length !== 0) 
     dataSource = dataSource // filter all activity with selected tags
       .filter(activity => selectedTags
-
-      // @ts-expect-error use reduce with default value false can't
-      // assign boolean or true
         .reduce((res, selectedTag) => res || activity.tags
           .map(tag => tag.name).includes(selectedTag.name),
-        false));
+        false as boolean));
 
   return (
     <div data-testid='activity-list'>
