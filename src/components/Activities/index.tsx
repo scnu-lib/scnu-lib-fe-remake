@@ -43,12 +43,13 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                     <Space vertical align='start'>
                       <Space align='start'>
                         <Title heading={5}>{item.title}</Title>
-                        {item.tags.map(tag => (<Tag 
-                          key={tag.name} 
-                          color={tag.color as TagColor}
-                        >
-                          {tag.name}
-                        </Tag>))}
+                        {item.tags.map(tag => (
+                          <Tag 
+                            key={tag.name} 
+                            color={tag.color as TagColor}
+                          >
+                            {tag.name}
+                          </Tag>))}
                       </Space>
                       <Text type='quaternary' size='small'>
                         负责人：{item.hosts[0]}{' '}
@@ -72,8 +73,7 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
             )}
           />
           : <Empty
-            image={<IllustrationNoResult
-              style={{ width: 150, height: 150 }} />}
+            image={<IllustrationNoResult style={{ width: 150, height: 150 }} />}
             description='搜索无结果'
           />
       }

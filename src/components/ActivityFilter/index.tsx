@@ -26,8 +26,7 @@ export default function ActivityFilter({ selectedTags, handleChangeSelectedTags 
                 onClick={() => {
                   if(!selectedTags.includes(tag))
                     handleChangeSelectedTags(selectedTags.concat(tag));
-                }
-                }
+                }}
               >
                 { tag.name }
               </Tag>)
@@ -36,16 +35,19 @@ export default function ActivityFilter({ selectedTags, handleChangeSelectedTags 
         </Space>
         <Space className={styles.selectedTags}>
           {
-            selectedTags.map(tag => <Tag
-              key={tag.name}
-              data-testid='selected-filter'
-              closable
-              color={tag.color as TagColor}
-              onClose={() => handleChangeSelectedTags(selectedTags
-                .filter(selectedTag => selectedTag !== tag))
-              }>
-              { tag.name }
-            </Tag>)
+            selectedTags.map(tag => (
+              <Tag
+                key={tag.name}
+                data-testid='selected-filter'
+                closable
+                color={tag.color as TagColor}
+                onClose={() => handleChangeSelectedTags(selectedTags
+                  .filter(selectedTag => selectedTag !== tag))
+                }
+              >
+                { tag.name }
+              </Tag>)
+            )
           }
         </Space>
       </Space>
