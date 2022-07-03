@@ -2,10 +2,14 @@ import React from 'react';
 import { Empty, List, Tag, Space } from '@douyinfe/semi-ui';
 import { IllustrationNoResult } from '@douyinfe/semi-illustrations';
 import { activityTagsType, ActivityType } from '../../types/types';
-import styles from './index.module.scss';
 import { Typography } from '@douyinfe/semi-ui';
 import { IconUserStroked } from '@douyinfe/semi-icons';
 import { TagColor } from '@douyinfe/semi-ui/lib/es/tag/interface';
+import {useNavigate} from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { activityDetail } from '../../store';
+import styles from './index.module.scss';
+
 
 interface ActivitiesProps {
   dataSource: ActivityType[]
@@ -20,6 +24,14 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
         .reduce((res, selectedTag) => res || activity.tags
           .map(tag => tag.name).includes(selectedTag.name),
         false as boolean));
+  
+  const setRelevantDetail = useSetRecoilState(activityDetail);
+  const navigate = useNavigate();
+  const clickToDetail = (activity:ActivityType):void => {
+    navigate(`details/${activity.title}`);
+    setRelevantDetail(() => activity
+    );
+  };
 
   return (
     <div data-testid='activity-list'>
@@ -42,7 +54,7 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                   <Space vertical align='start' className={styles.activityItemMain}>
                     <Space vertical align='start'>
                       <Space align='start'>
-                        <Title heading={5}>{item.title}</Title>
+                        <Title heading={5} onClick={() => clickToDetail(item)}>{item.title}</Title>
                         {item.tags.map(tag => (<Tag 
                           key={tag.name} 
                           color={tag.color as TagColor}
