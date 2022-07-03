@@ -75,10 +75,12 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
               />
             )}
           />
-          : <Empty
-            image={<IllustrationNoResult style={{ width: 150, height: 150 }} />}
-            description='搜索无结果'
-          />
+          : (
+            <Empty
+              image={<IllustrationNoResult style={{ width: 150, height: 150 }} />}
+              description='搜索无结果'
+            />
+          )
       }
     </div>
   );
