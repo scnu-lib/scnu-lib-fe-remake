@@ -1,10 +1,12 @@
 import { Card } from '@douyinfe/semi-ui';
 import classNames from 'classnames';
 import styles from './CardList.module.scss';
+
 type CardListProps = {
   contentList: { name: string; imgElement: JSX.Element }[];
   showTips?: string;
 };
+
 export default function CardList(props: CardListProps) {
   return (
     <div className={classNames(styles.cardListContainer)}>
