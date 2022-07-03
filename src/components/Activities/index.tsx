@@ -15,12 +15,14 @@ interface ActivitiesProps {
 export default function Activities({ dataSource, selectedTags }: ActivitiesProps) {
   const { Text, Title, Paragraph } = Typography;
   if(selectedTags && selectedTags.length !== 0) 
-    dataSource = dataSource.filter(activity => selectedTags.reduce(
-      (res, selectedTag) => (
-        res || activity.tags.map(tag => tag.name).includes(selectedTag.name)
-      ),
-      false as boolean)
-    );
+    dataSource = dataSource.filter(activity => (
+      selectedTags.reduce(
+        (res, selectedTag) => (
+          res || activity.tags.map(tag => tag.name).includes(selectedTag.name)
+        ),
+        false as boolean
+      )
+    ));// filter all activity with selected tags
 
   return (
     <div data-testid='activity-list'>
