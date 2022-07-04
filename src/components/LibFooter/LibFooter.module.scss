@@ -5,7 +5,8 @@
   background-color: #D8EEFE;
   flex-direction: column;
   align-items: center;
-  padding: 13px;
+  padding-top: 13px;
+  padding-bottom: 44px;
 
   .titleFont {
     font-size: 20px;
@@ -16,9 +17,10 @@
   .contentContainer {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
-    width: 60%;
-    margin-top: 30px;
+    width: 80%;
+    margin-top: 16px;
 
     .textFont {
       font-size: 16px;
@@ -27,8 +29,19 @@
 
     .avatarContainer {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
       padding: 0;
+    }
+  }
+
+  .iconContainer {
+    width: auto;
+
+    .iconSize {
+      width: 24px;
+      height: 24px;
+      margin: 5px;
     }
   }
 }
