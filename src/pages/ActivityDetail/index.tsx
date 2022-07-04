@@ -2,8 +2,9 @@ import { useRecoilValue } from 'recoil';
 import {activityDetail} from '../../store';
 import { Typography, Tag, Space, Breadcrumb} from '@douyinfe/semi-ui';
 import { IconList} from '@douyinfe/semi-icons';
-import styles from './index.module.scss';
 import { TagColor } from '@douyinfe/semi-ui/lib/es/tag';
+import ButtonToSignUp from '../../components/ButtonToSignUp';
+import styles from './index.module.scss';
 
 
 export default function ActivityDetail() {
@@ -19,9 +20,8 @@ export default function ActivityDetail() {
         <Breadcrumb.Item>{title}</Breadcrumb.Item>
       </Breadcrumb>
       <div className={styles.activityDetail}>
-        <div className={styles.activityImgContainer}>
-          <img src={img} className= {styles.activityImg}/>
-        </div>
+        <div className={styles.activityImgContainer} 
+          style={{ background: `url(${img}) no-repeat center`, backgroundSize: 'cover'}}></div>
         <div className={styles.detailText}>
           <Title heading={1}>{title}</Title>
           <Text type='quaternary' strong className={styles.description}>{description}</Text>
@@ -42,6 +42,7 @@ export default function ActivityDetail() {
               <Text >报名截止时间：{register_date}{' '}</Text>
               <Text >活动时间：{start_date} ~ {end_date}</Text>
             </Space>
+            <ButtonToSignUp className={styles.button} isAllowVolunteer={is_allow_volunteer}/>
           </Space>
 
         </div>

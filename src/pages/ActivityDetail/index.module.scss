@@ -14,12 +14,12 @@
       border: 5px solid black;
       border-radius: 10px;
       box-shadow: 10px 10px  black;
+      margin-bottom: 20px;
     }
 
     .activityImg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
 
     .detailText {
@@ -28,6 +28,11 @@
       .underpart {
         margin-top: 100px;
       }
+    }
+
+    .button {
+      margin-top: 50px;
+      margin-left: 300px;
     }
   }
 }
