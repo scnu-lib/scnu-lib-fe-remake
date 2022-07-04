@@ -11,9 +11,17 @@ export default function LibFooter(){
         <Text className={styles.textFont}>负责人: 谭老师</Text>
         <div className={styles.avatarContainer}>
           <Text className={styles.textFont}>网站开发: </Text>
-          <AvatarGroup></AvatarGroup>
+          <AvatarGroup>
+            <Avatar color='red' alt='Yang'>Y</Avatar>
+            <Avatar color='green' alt='Xu Feng'>XF</Avatar>
+            <Avatar color='yellow' alt='Zhuang'>Z</Avatar>
+          </AvatarGroup>
         </div>
         <Text className={styles.textFont}>平台招新: yuquelink</Text>
+      </div>
+      <Title className={styles.titleFont}>联系我们</Title>
+      <div className={styles.contentContainer}>
+
       </div>
     </div>
   );
