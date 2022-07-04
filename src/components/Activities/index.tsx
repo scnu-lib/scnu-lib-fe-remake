@@ -14,7 +14,7 @@ interface ActivitiesProps {
 
 export default function Activities({ dataSource, selectedTags }: ActivitiesProps) {
   const { Text, Title, Paragraph } = Typography;
-  if(selectedTags && selectedTags.length !== 0) 
+  if (selectedTags && selectedTags.length !== 0)
     dataSource = dataSource.filter(activity => (
       selectedTags.reduce(
         (res, selectedTag) => (
@@ -27,17 +27,18 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
   return (
     <div data-testid='activity-list'>
       {
-        dataSource && dataSource.length 
-          ? <List 
+        dataSource && dataSource.length
+          ? <List
             dataSource={dataSource}
             className={styles.activityList}
             size='small'
             renderItem={item => (
               <List.Item
+                className={styles.activityItem}
                 header={
-                  <img 
+                  <img
                     alt='activity img'
-                    src={item.img} 
+                    src={item.img}
                     className={styles.activityImg}
                   />
                 }
@@ -47,8 +48,8 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                       <Space align='start'>
                         <Title heading={5}>{item.title}</Title>
                         {item.tags.map(tag => (
-                          <Tag 
-                            key={tag.name} 
+                          <Tag
+                            key={tag.name}
                             color={tag.color as TagColor}
                           >
                             {tag.name}
@@ -61,11 +62,11 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                         活动时间：{item.start_date} ~ {item.end_date}
                       </Text>
                       <Paragraph spacing='extended' >
-                        { item.description }
+                        {item.description}
                       </Paragraph>
                     </Space>
                     <div className={styles.peopleNumber}>
-                      <IconUserStroked style={{marginRight: '2px'}}/>
+                      <IconUserStroked style={{ marginRight: '2px' }} />
                       <Text size='small' type='quaternary'>
                         {item.num_of_people} / {item.max_num_of_people}
                       </Text>

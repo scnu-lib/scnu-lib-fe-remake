@@ -3,6 +3,7 @@
   height: 150px;
   border: 2px black solid;
   border-radius: 4px;
+  margin-right: 4px;
 }
 
 .peopleNumber {
@@ -19,14 +20,8 @@
 
 .activityList {
   padding: 0 18px;
+}
 
-  :global {
-    .semi-list-item {
-      margin: 8px 0;
-    }
-
-    .semi-list-item-body-header {
-      margin-right: 24px;
-    }
-  }
+.activityItem {
+  margin: 8px 0;
 }
