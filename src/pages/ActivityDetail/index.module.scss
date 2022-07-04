@@ -1,29 +1,33 @@
-.activityDetail {
-  display: flex;
-  height: 90%;
-  margin: 5vw 10vh;
-  flex-wrap: wrap;
-}
+.detailPage {
+  margin: 0 10vh;
 
-.activityImgContainer {
-  width: 750px;
-  height: 410px;
-  padding: 10px;
-  border: 5px solid black;
-  border-radius: 10px;
-  box-shadow: 10px 10px  black;
-}
+  .activityDetail {
+    display: flex;
+    margin: 5vw 0;
+    height: 90%;
+    flex-wrap: wrap;
 
-.activityImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .activityImgContainer {
+      width: 750px;
+      height: 410px;
+      padding: 10px;
+      border: 5px solid black;
+      border-radius: 10px;
+      box-shadow: 10px 10px  black;
+    }
 
-.detailText {
-  margin-left: 5vw;
+    .activityImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  .underpart {
-    margin-top: 100px;
+    .detailText {
+      margin-left: 5vw;
+
+      .underpart {
+        margin-top: 100px;
+      }
+    }
   }
 }
