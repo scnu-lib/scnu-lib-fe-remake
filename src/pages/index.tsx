@@ -6,6 +6,7 @@ import CardList from '../components/CardList';
 import Newspaper from '../assets/svg/newspaper.svg';
 import Studying from '../assets/svg/studying.svg';
 import styles from './index.module.scss';
+import LibFooter from '../components/LibFooter';
 
 export default function Index() {
   const navigationTo = useNavigate();
@@ -56,6 +57,7 @@ export default function Index() {
           />
         }
       />
+      <LibFooter />
     </div>
   );
 }
