@@ -15,6 +15,10 @@
 .activityItemMain {
   height: 150px;
   justify-content: space-between;
+
+  h5:hover {
+    cursor: pointer;
+  }
 }
 
 .activityList {
