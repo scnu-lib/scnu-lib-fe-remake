@@ -1,15 +1,19 @@
 .detailPage {
-  margin: 0 10vh;
+  // margin: 0 10vw;
 
   .activityDetail {
     display: flex;
-    margin: 5vw 0;
-    height: 90%;
+    justify-self: center;
+    margin: 5vw;
+    width: 100vw;
+    max-height: 410px;
     flex-wrap: wrap;
 
     .activityImgContainer {
-      width: 750px;
-      height: 410px;
+      width: 80vw;
+      max-width: 750px;
+      height: 54vw;
+      max-height: 410px;
       padding: 10px;
       border: 5px solid black;
       border-radius: 10px;
@@ -17,22 +21,19 @@
       margin-bottom: 20px;
     }
 
-    .activityImg {
-      width: 100%;
-      height: 100%;
-    }
-
     .detailText {
-      margin-left: 5vw;
+      margin: 1vw 5vw;
+      width: 80vw;
+      max-width: 500px;
 
       .underpart {
         margin-top: 100px;
       }
-    }
 
-    .button {
-      margin-top: 50px;
-      margin-left: 300px;
+      .button {
+        margin-top: 50px;
+        margin-left: 300px;
+      }
     }
   }
 }
