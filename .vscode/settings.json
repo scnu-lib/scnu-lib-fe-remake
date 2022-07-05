@@ -2,6 +2,7 @@
 	"editor.detectIndentation": false,
 	"prettier.enable": false,
 	"editor.codeActionsOnSave": {
+    "source.fixAll": true,
 		"source.fixAll.eslint": true
 	}
 }
