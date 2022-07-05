@@ -14,6 +14,8 @@ enum EsignUpFlag {
 }
 export default function ActivityDetail() {
   const relevantDetail = useRecoilValue(activityDetail);
+
+  //TODO: 初始请求后结果给 signUpFlag
   const [signUpFlag, setSignUpFlag] = useState(EsignUpFlag.irrelevant );
   const { Title, Text } = Typography;
   const {title, start_date, end_date, img, description, max_num_of_people, register_date,
@@ -26,8 +28,9 @@ export default function ActivityDetail() {
         <Breadcrumb.Item>{title}</Breadcrumb.Item>
       </Breadcrumb>
       <div className={styles.activityDetail}>
-        <div className={styles.activityImgContainer} 
-          style={{ background: `url(${img}) no-repeat center`, backgroundSize: 'cover'}}></div>
+        <div className={styles.activityImgContainer} >          
+          <div className={styles.img} style={{ background: `url(${img}) no-repeat center`, backgroundSize: 'cover'}}></div>
+        </div>
         <div className={styles.detailText}>
           <Title heading={1}>{title}</Title>
           <Text type='quaternary' strong className={styles.description}>{description}</Text>
