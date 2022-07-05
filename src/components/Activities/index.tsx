@@ -58,12 +58,14 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
                     <Space vertical align='start'>
                       <Space align='start'>
                         <Title heading={5} onClick={() => clickToDetail(item)}>{item.title}</Title>
-                        {item.tags.map(tag => (<Tag 
-                          key={tag.name} 
-                          color={tag.color as TagColor}
-                        >
-                          {tag.name}
-                        </Tag>))}
+                        {item.tags.map(tag => (
+                          <Tag 
+                            key={tag.name} 
+                            color={tag.color as TagColor}
+                          >
+                            {tag.name}
+                          </Tag>
+                        ))}
 
                       </Space>
                       <Text type='quaternary' size='small'>
