@@ -1,4 +1,5 @@
-import {Button, Popover } from '@douyinfe/semi-ui';
+import { useState } from 'react';
+import {Button, Popover, Modal, TextArea } from '@douyinfe/semi-ui';
 import {EsignUpFlag} from '../../constants/constants';
 import styles from './index.module.scss';
 import classNames from 'classnames';
@@ -12,11 +13,27 @@ interface ButtonToSignUpProps{
 
 export default function ButtonToSignUp({isAllowVolunteer, signUpFlag, 
   setSignUpFlag, ...props}:ButtonToSignUpProps){
-  
-  const click = (flag:EsignUpFlag) => {
-    //TODO: 发送请求 结果给 setSignUpFlag
-    setSignUpFlag(flag);
+  const [showModal, setShowModal] = useState(false);
+  const [tmpFlag, setTmpFlag] = useState(signUpFlag);
+
+  function click (flag:EsignUpFlag) {
+    setShowModal(true);
+    setTmpFlag(flag);
   };
+  
+  function handleOk () {
+    setShowModal(false);    
+
+    //TODO: 发送请求 结果给 setSignUpFlag    
+    setSignUpFlag(tmpFlag);
+  };
+
+  function handleCancel () {
+    setShowModal(false);
+    setTmpFlag(signUpFlag);
+  };
+
+  const text = tmpFlag === EsignUpFlag.participant ? '活动' : '志愿者';
 
   return (
     <div className={classNames(styles.buttons, props?.className)}>
@@ -35,7 +52,7 @@ export default function ButtonToSignUp({isAllowVolunteer, signUpFlag,
           arrowPointAtCenter
           content={
             <article>
-              你已成功报名{signUpFlag === EsignUpFlag.participant ? '活动' : '志愿者'}！
+              你已成功报名{text}！
             </article>
           }
           position='top'     
@@ -45,9 +62,14 @@ export default function ButtonToSignUp({isAllowVolunteer, signUpFlag,
             color: 'var(--semi-color-white)',
           }}     
         >
-          <Button disabled theme='solid' type='warning' style={{width: '200px'}}>已报名{signUpFlag === EsignUpFlag.participant ? '活动' : '志愿者'}</Button>
+          <Button disabled theme='solid' type='warning' style={{width: '200px'}}>已报名{text}</Button>
         </Popover>
+        
       }
+      <Modal title={`报名${text}`} visible={showModal} onCancel={handleCancel} onOk={handleOk}>
+        <TextArea maxCount={100} showClear/>
+      </Modal>
+
     </div>
   );
 }
