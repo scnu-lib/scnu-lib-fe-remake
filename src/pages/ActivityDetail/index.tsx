@@ -6,7 +6,7 @@ import { IconList} from '@douyinfe/semi-icons';
 import { TagColor } from '@douyinfe/semi-ui/lib/es/tag';
 import ButtonToSignUp from '../../components/ButtonToSignUp';
 import LibFooter from '../../components/LibFooter';
-
+import {useNavigate} from 'react-router-dom';
 import styles from './index.module.scss';
 
 enum EsignUpFlag {
@@ -23,10 +23,15 @@ export default function ActivityDetail() {
   const {title, start_date, end_date, img, description, max_num_of_people, register_date,
     num_of_people, spot, tags, hosts, is_allow_volunteer, max_num_of_volunteer, num_of_volunteer} = relevantDetail;
 
+  const navigate = useNavigate();
+  const ClickToActivities = () => {
+    navigate('/activities');
+  };
+
   return (
     <div className={styles.detailPage}>
       <Breadcrumb compact={false} className={styles.breadCrumb} showTooltip={{width: 'auto'}}> 
-        <Breadcrumb.Item icon={<IconList />}>活动列表</Breadcrumb.Item>
+        <Breadcrumb.Item icon={<IconList />} onClick={ClickToActivities}>活动列表</Breadcrumb.Item>
         <Breadcrumb.Item>{title}</Breadcrumb.Item>
       </Breadcrumb>
       <div className={styles.activityDetail}>
