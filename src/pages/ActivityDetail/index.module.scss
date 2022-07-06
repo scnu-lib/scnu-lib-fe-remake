@@ -1,4 +1,6 @@
 .detailPage {
+  width: 100%;
+
   .breadCrumb {
     margin-left: 20px;
   }
@@ -6,8 +8,9 @@
   .activityDetail {
     display: flex;
     justify-self: center;
-    margin: 5vw;
-    width: 100vw;
+    margin: 5vw 5vw 300px;
+
+    // width: 100vw;
     max-height: 410px;
     flex-wrap: wrap;
 
@@ -31,7 +34,7 @@
     .detailText {
       margin: 1vw 5vw;
       width: 80vw;
-      max-width: 500px;
+      max-width: 400px;
 
       .underpart {
         margin-top: 100px;
