@@ -5,6 +5,8 @@ import { Typography, Tag, Space, Breadcrumb} from '@douyinfe/semi-ui';
 import { IconList} from '@douyinfe/semi-icons';
 import { TagColor } from '@douyinfe/semi-ui/lib/es/tag';
 import ButtonToSignUp from '../../components/ButtonToSignUp';
+import LibFooter from '../../components/LibFooter';
+
 import styles from './index.module.scss';
 
 enum EsignUpFlag {
@@ -54,9 +56,10 @@ export default function ActivityDetail() {
             <ButtonToSignUp className={styles.button} isAllowVolunteer={is_allow_volunteer}
               signUpFlag={signUpFlag} setSignUpFlag={setSignUpFlag}/>
           </Space>
-
         </div>
 
       </div>
-    </div>);
+      <LibFooter/>
+    </div>
+  );
 }
