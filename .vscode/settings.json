@@ -2,15 +2,13 @@
 	"editor.detectIndentation": false,
 	"prettier.enable": false,
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true, //开启自动修复
+		"source.fixAll": true, 
     "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true // stylelint 自动修复
+    "source.fixAll.stylelint": true 
   },
   "scss.format.enable": false,
-  //  // 关闭编辑器内置样式检查避免冲突
   "css.validate": false,
   "less.validate": false,
   "scss.validate":false,
-  // 配置stylelint检查的文件类型范围
   "stylelint.validate": ["css", "scss"]
 }
