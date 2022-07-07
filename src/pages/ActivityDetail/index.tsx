@@ -14,12 +14,13 @@ enum EsignUpFlag {
   participant,
   volunteer
 }
+
 export default function ActivityDetail() {
+  const { Title, Text } = Typography;
   const relevantDetail = useRecoilValue(activityDetail);
 
   //TODO: 初始请求后结果给 signUpFlag
   const [signUpFlag, setSignUpFlag] = useState(EsignUpFlag.irrelevant );
-  const { Title, Text } = Typography;
   const {title, start_date, end_date, img, description, max_num_of_people, register_date,
     num_of_people, spot, tags, hosts, is_allow_volunteer, max_num_of_volunteer, num_of_volunteer} = relevantDetail;
 
