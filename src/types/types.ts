@@ -9,6 +9,8 @@ export interface ActivityType {
   description: string;
   max_num_of_people: number;
   num_of_people: number;
+  max_num_of_volunteer?: number;
+  num_of_volunteer?: number;
   spot: string;
   tags: typeof activityTags;
   hosts: string[];
