@@ -43,3 +43,9 @@ export const activityStub = [
     is_allow_volunteer: true,
   }
 ];
+
+export enum EsignUpFlag {
+  irrelevant,
+  participant,
+  volunteer
+}
