@@ -1,18 +1,17 @@
 import { useState } from 'react';
-import {Button, Popover, Modal, TextArea } from '@douyinfe/semi-ui';
-import {EsignUpFlag} from '../../constants/constants';
+import { Button, Popover, Modal, TextArea } from '@douyinfe/semi-ui';
+import { EsignUpFlag } from '../../constants/constants';
 import styles from './index.module.scss';
 import classNames from 'classnames';
 
 interface ButtonToSignUpProps{
   className?: string,
-  isAllowVolunteer:boolean
-  signUpFlag:EsignUpFlag
-  setSignUpFlag:React.Dispatch<React.SetStateAction<EsignUpFlag>>
+  isAllowVolunteer: boolean
+  signUpFlag: EsignUpFlag
+  setSignUpFlag: React.Dispatch<React.SetStateAction<EsignUpFlag>>
 }
 
-export default function ButtonToSignUp({isAllowVolunteer, signUpFlag, 
-  setSignUpFlag, ...props}:ButtonToSignUpProps){
+export default function ButtonToSignUp({isAllowVolunteer, signUpFlag, setSignUpFlag, ...props}:ButtonToSignUpProps){
   const [showModal, setShowModal] = useState(false);
   const [tmpFlag, setTmpFlag] = useState(signUpFlag);
 

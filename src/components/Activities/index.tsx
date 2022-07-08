@@ -5,7 +5,7 @@ import { activityTagsType, ActivityType } from '../../types/types';
 import { Typography } from '@douyinfe/semi-ui';
 import { IconUserStroked } from '@douyinfe/semi-icons';
 import { TagColor } from '@douyinfe/semi-ui/lib/es/tag/interface';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import { activityDetail } from '../../store';
 import styles from './index.module.scss';
@@ -28,9 +28,9 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
       )
     ));// filter all activity with selected tags
   const setRelevantDetail = useSetRecoilState(activityDetail);
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const clickToDetail = (activity:ActivityType):void => {
-    navigate(`details/${activity.title}`);
+    navigateTo(`details/${activity.title}`);
     setRelevantDetail(() => activity
     );
   };
