@@ -28,9 +28,9 @@ export default function Activities({ dataSource, selectedTags }: ActivitiesProps
       )
     ));// filter all activity with selected tags
   const setRelevantDetail = useSetRecoilState(activityDetail);
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const clickToDetail = (activity:ActivityType):void => {
-    navigate(`details/${activity.title}`);
+    navigateTo(`details/${activity.title}`);
     setRelevantDetail(() => activity
     );
   };

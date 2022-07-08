@@ -23,9 +23,9 @@ export default function ActivityDetail() {
   const {title, start_date, end_date, img, description, max_num_of_people, register_date,
     num_of_people, spot, tags, hosts, is_allow_volunteer, max_num_of_volunteer, num_of_volunteer} = relevantDetail;
 
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const ClickToActivities = () => {
-    navigate('/activities');
+    navigateTo('/activities');
   };
 
   return (
