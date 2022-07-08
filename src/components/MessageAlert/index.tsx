@@ -25,7 +25,7 @@ export default function MessageAlert() {
         </Dropdown.Menu>
       }
     >
-      <Button theme='borderless' type='tertiary' icon={<IconBell size='large'></IconBell>} />
+      <Button theme='borderless' type='tertiary' icon={<IconBell size='large' />} />
     </Dropdown>
   );
 }
