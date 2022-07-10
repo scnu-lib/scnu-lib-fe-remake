@@ -14,18 +14,19 @@ enum EsignUpFlag {
   participant,
   volunteer
 }
+
 export default function ActivityDetail() {
+  const { Title, Text } = Typography;
   const relevantDetail = useRecoilValue(activityDetail);
 
   //TODO: 初始请求后结果给 signUpFlag
   const [signUpFlag, setSignUpFlag] = useState(EsignUpFlag.irrelevant );
-  const { Title, Text } = Typography;
   const {title, start_date, end_date, img, description, max_num_of_people, register_date,
     num_of_people, spot, tags, hosts, is_allow_volunteer, max_num_of_volunteer, num_of_volunteer} = relevantDetail;
 
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const ClickToActivities = () => {
-    navigate('/activities');
+    navigateTo('/activities');
   };
 
   return (
@@ -58,8 +59,12 @@ export default function ActivityDetail() {
               <Text >报名截止时间：{register_date}{' '}</Text>
               <Text >活动时间：{start_date} ~ {end_date}</Text>
             </Space>
-            <ButtonToSignUp className={styles.button} isAllowVolunteer={is_allow_volunteer}
-              signUpFlag={signUpFlag} setSignUpFlag={setSignUpFlag}/>
+            <ButtonToSignUp 
+              className={styles.button} 
+              isAllowVolunteer={is_allow_volunteer}
+              signUpFlag={signUpFlag} 
+              setSignUpFlag={setSignUpFlag}
+            />
           </Space>
         </div>
 

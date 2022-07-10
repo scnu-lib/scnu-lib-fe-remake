@@ -6,6 +6,7 @@ import { activityTags, imgLinkStub } from '../../constants/constants';
 import styles from './index.module.scss';
 import { Divider } from '@douyinfe/semi-ui';
 import { activityTagsType } from '../../types/types';
+import LibFooter from '../../components/LibFooter';
 
 export default function ActivitiesList() {
   const dataSource = [
@@ -57,5 +58,6 @@ export default function ActivitiesList() {
     </div>
     <Divider margin='12px'/>
     <Activities selectedTags={selectedTags} dataSource={dataSource.concat(dataSource)} />
+    <LibFooter />
   </div>;
 }

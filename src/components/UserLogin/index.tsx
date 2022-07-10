@@ -1,5 +1,6 @@
-import { Button, Modal } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui';
 import style from './UserLogin.module.scss';
+import LoginModal from './components/LoginModal';
 import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { isLogin } from '../../store';
@@ -27,7 +28,11 @@ export default function UserLogin() {
           <Button className={style.buttonStyle} theme='borderless' onClick={handleShowModal}>
             注册|登录
           </Button>
-          <Modal title={'登录'} visible={showModal} onCancel={handleCancel} onOk={handleOk}></Modal>
+          <LoginModal 
+            onCancel={handleCancel}
+            onOk={handleOk}
+            showModal={showModal}
+          />
         </div>
       )}
     </div>
